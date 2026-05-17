@@ -14,18 +14,17 @@
     --surface2: #F3ECE0;
     --text: #1C1A14;
     --text2: #6B6152;
-    
-    /* Holland Oranje Theme */
     --accent: #E05A16; 
     --accent-dark: #B8430A;
     --accent-light: #FDF2EB;
-    
     --orange: #E05A16;
     --orange-light: #FDF2EB;
     --green: #2A7A4B;
     --green-light: #E6F4ED;
     --purple: #7C3AED;
     --purple-light: #F3E8FF;
+    --blue: #2B6CB0;
+    --blue-light: #EBF8FF;
     --red: #C0392B;
     --red-light: #FDECEA;
     --border: rgba(224, 90, 22, 0.12);
@@ -44,7 +43,6 @@
     padding-bottom: calc(75px + env(safe-area-inset-bottom));
   }
 
-  /* LOADING SCREEN */
   #loading-screen {
     min-height: 100vh;
     display: flex;
@@ -75,10 +73,8 @@
   }
   .loading-status { color: var(--text2); font-size: 14px; margin-top: 1rem; font-family: 'DM Mono', monospace; }
 
-  /* APP SHELL */
   #app { display: none; }
 
-  /* NAVIGATION TOP BAR */
   header {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -96,6 +92,7 @@
     color: var(--accent);
     display: flex; align-items: center; gap: 0.5rem;
     letter-spacing: -0.01em;
+    cursor: pointer;
   }
   .header-actions { display: flex; align-items: center; gap: 0.3rem; }
   .btn-icon {
@@ -108,7 +105,6 @@
   }
   .btn-icon:active { background: var(--accent-light); color: var(--accent); }
 
-  /* BOTTOM NAVIGATION BAR FOR IPHONE */
   .bottom-nav {
     position: fixed;
     bottom: 0; left: 0; right: 0;
@@ -117,7 +113,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-top: 1px solid var(--border);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     height: calc(64px + env(safe-area-inset-bottom));
     padding-bottom: env(safe-area-inset-bottom);
     z-index: 900;
@@ -131,15 +127,13 @@
     gap: 4px;
   }
   .nav-tab i { font-size: 18px; }
-  .nav-tab span { font-size: 11px; font-weight: 600; }
+  .nav-tab span { font-size: 10px; font-weight: 600; }
   .nav-tab.active { color: var(--accent); }
 
-  /* MAIN CONTAINER */
   main { padding: 1rem; }
   .panel { display: none; }
   .panel.active { display: block; }
 
-  /* HOME HUB VIEW */
   .home-welcome { margin-bottom: 1.25rem; }
   .home-welcome h2 { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 600; margin-bottom: 0.2rem; }
   .home-welcome p { color: var(--text2); font-size: 14px; }
@@ -154,6 +148,7 @@
     align-items: center; justify-content: space-between;
     gap: 1rem;
     box-shadow: var(--shadow);
+    cursor: pointer;
   }
   .home-card-body { display: flex; align-items: center; gap: 0.85rem; flex: 1; }
   .hc-icon {
@@ -163,6 +158,7 @@
     font-size: 1.3rem;
   }
   .hc-vocab .hc-icon { background: var(--accent-light); color: var(--accent); }
+  .hc-sentences .hc-icon { background: var(--blue-light); color: var(--blue); }
   .hc-grammar .hc-icon { background: #FFF6F0; color: var(--orange); }
   .hc-conj .hc-icon { background: var(--green-light); color: var(--green); }
   
@@ -170,7 +166,6 @@
   .hc-desc { color: var(--text2); font-size: 13px; line-height: 1.4; }
   .hc-meta { font-size: 12px; font-weight: 600; color: var(--accent); white-space: nowrap; display: flex; align-items: center; gap: 4px; }
 
-  /* STATS BAR */
   .stats-bar { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 1rem; }
   .stat-card {
     background: var(--surface); border-radius: var(--radius);
@@ -179,7 +174,6 @@
   .stat-num { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 600; color: var(--accent); }
   .stat-label { font-size: 11px; color: var(--text2); margin-top: 0.1rem; font-weight: 500; }
 
-  /* TOOLBAR ELEMENTS */
   .toolbar { display: flex; flex-direction: column; gap: 8px; margin-bottom: 1rem; }
   .toolbar-row { display: flex; gap: 8px; width: 100%; }
   .search-box { position: relative; flex: 1; }
@@ -205,10 +199,10 @@
     font-size: 14px; font-weight: 600;
     display: flex; align-items: center; justify-content: center; gap: 0.4rem;
     box-shadow: 0 2px 8px rgba(224, 90, 22, 0.15);
+    cursor: pointer;
   }
   .btn-add:active { background: var(--accent-dark); }
 
-  /* LIST VIEW / MOBILE CARDS */
   .vocab-list { display: flex; flex-direction: column; gap: 8px; }
   .vocab-mobile-card {
     background: var(--surface); border-radius: var(--radius);
@@ -218,32 +212,32 @@
   }
   .vmc-top { display: flex; justify-content: space-between; align-items: flex-start; }
   .vmc-title-box { display: flex; flex-direction: column; }
-  .vmc-dutch { font-weight: 600; font-size: 16px; color: var(--text); }
+  
+  /* Article & Plural Badges styling */
+  .article-badge { background: #3182CE; color: white; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-right: 6px; }
+  .plural-line { font-size: 12px; color: var(--text2); margin-top: 4px; font-style: italic; background: #FAF5FF; padding: 3px 8px; border-radius: 6px; border-left: 2px solid #9F7AEA; display: inline-block; width: max-content; }
+  .parent-link { font-size: 11px; font-family: 'DM Mono', monospace; background: var(--surface2); color: var(--text2); padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; width: max-content; }
+
+  .vmc-dutch { font-weight: 600; font-size: 16px; color: var(--text); display: flex; align-items: center; }
   .vmc-trans { color: var(--text2); font-size: 14px; margin-top: 1px; }
   .vmc-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 2px; }
   .tag {
     display: inline-block; padding: 2px 7px; border-radius: 20px;
     font-size: 10px; font-weight: 600; background: var(--surface2); color: var(--text2);
   }
-  .tag.type-word { background: var(--accent-light); color: var(--accent); }
-  .tag.type-sentence { background: #FFF6F0; color: var(--orange); }
+  .tag.type-noun { background: var(--accent-light); color: var(--accent); }
   .tag.type-verb { background: var(--green-light); color: var(--green); }
   
-  .vmc-example {
-    font-size: 13px; color: var(--text); font-style: italic;
-    background: var(--accent-light); padding: 6px 10px; border-radius: 8px;
-    margin-top: 2px; border-left: 3px solid var(--accent);
-  }
   .vmc-actions { display: flex; justify-content: flex-end; gap: 6px; border-top: 1px solid var(--border-dark); padding-top: 8px; margin-top: 4px; }
   .btn-sm {
     padding: 0.4rem 0.8rem; border: none; border-radius: 8px;
     font-size: 13px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 4px;
   }
-  .btn-speak { background: var(--accent-light); color: var(--accent); padding-left: 1rem; padding-right: 1rem; font-weight: 600; }
+  .btn-speak { background: var(--accent-light); color: var(--accent); }
+  .btn-search-sentences { background: var(--blue-light); color: var(--blue); font-weight: 600; }
   .btn-edit { background: var(--surface2); color: var(--text); }
   .btn-del { background: var(--red-light); color: var(--red); }
 
-  /* GRAMMAR / CONJUGATION CARDS */
   .grammar-grid { display: flex; flex-direction: column; gap: 10px; }
   .grammar-card {
     background: var(--surface); border-radius: var(--radius);
@@ -253,18 +247,16 @@
   .gc-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
   .gc-topic { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); }
   .gc-type { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
-  .gc-notes { font-size: 13px; color: var(--text2); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .gc-notes { font-size: 13px; color: var(--text2); line-height: 1.5; }
   .gc-footer { margin-top: 0.65rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-dark); padding-top: 8px; }
   .gc-date { font-size: 11px; color: var(--text2); }
   .gc-actions { display: flex; gap: 6px; }
 
-  /* CONJUGATION TABLE */
   .conj-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; border-radius: 8px; overflow: hidden; }
   .conj-table td { padding: 0.5rem; font-size: 13px; border: 1px solid var(--border-dark); }
   .conj-table td:first-child { color: var(--text2); font-size: 11px; width: 100px; background: var(--bg); font-weight: 500; }
   .conj-table td:last-child { font-weight: 600; font-family: 'DM Mono', monospace; color: var(--text); }
 
-  /* BOTTOM SHEET MODALS */
   .modal-overlay {
     position: fixed; inset: 0; background: rgba(0,0,0,0.5);
     display: flex; align-items: flex-end; justify-content: center;
@@ -291,27 +283,18 @@
   }
   .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--accent); }
   .field textarea { min-height: 70px; }
+  
   .modal-actions { display: flex; flex-direction: column-reverse; gap: 8px; margin-top: 1.2rem; }
   .btn-cancel {
     width: 100%; padding: 0.75rem; border: none; border-radius: 10px;
-    background: var(--surface2); color: var(--text); font-size: 14px; font-weight: 500; text-align: center;
+    background: var(--surface2); color: var(--text); font-size: 14px; font-weight: 500; text-align: center; cursor: pointer;
   }
   .btn-save {
     width: 100%; padding: 0.75rem; background: var(--accent); color: white;
-    border: none; border-radius: 10px; font-size: 14px; font-weight: 600; text-align: center;
+    border: none; border-radius: 10px; font-size: 14px; font-weight: 600; text-align: center; cursor: pointer;
   }
   .btn-save:active { background: var(--accent-dark); }
 
-  /* CONJ BUILDER */
-  .conj-builder { border: 1px solid var(--border-dark); border-radius: 10px; overflow: hidden; }
-  .conj-row { display: grid; grid-template-columns: 90px 1fr; border-bottom: 1px solid var(--border-dark); }
-  .conj-row:last-child { border-bottom: none; }
-  .conj-label { padding: 0.45rem 0.6rem; background: var(--bg); font-size: 12px; color: var(--text2); display: flex; align-items: center; border-right: 1px solid var(--border-dark); }
-  .conj-input { padding: 0.45rem 0.6rem; border: none; font-size: 13px; font-family: 'DM Mono', monospace; background: var(--surface); color: var(--text); outline: none; width: 100%; }
-
-  .detail-notes { font-size: 14px; color: var(--text); line-height: 1.5; white-space: pre-wrap; background: var(--accent-light); padding: 0.85rem; border-radius: 10px; margin-bottom: 1rem; border-left: 3px solid var(--accent); }
-
-  /* STATUS / TOASTS */
   .status-bar { background: var(--accent); color: white; padding: 6px 1rem; font-size: 12px; text-align: center; font-weight: 500; position: sticky; top: 54px; z-index: 99; display: flex; justify-content: space-between; }
   .status-bar a { text-decoration: underline; color: white; cursor: pointer; }
   .hidden { display: none !important; }
@@ -330,6 +313,12 @@
   .empty-state { padding: 2rem 1rem; text-align: center; color: var(--text2); font-size: 14px; }
   .empty-state i { font-size: 2rem; display: block; margin-bottom: 0.5rem; color: var(--surface2); }
   .section-title { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--accent-dark); }
+  
+  /* Popup list updates */
+  .popup-sentence-item { padding: 10px; border-bottom: 1px solid var(--border-dark); }
+  .popup-sentence-item:last-child { border-bottom: none; }
+  .psi-dutch { font-weight: 600; color: var(--text); font-size: 14px; }
+  .psi-english { color: var(--text2); font-size: 13px; margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -338,7 +327,7 @@
   <div class="loading-card">
     <div class="loading-flag">🇳🇱</div>
     <h1 class="loading-title">THE DUTCH DREAM</h1>
-    <div class="loading-status" id="load-msg">Initializing core components...</div>
+    <div class="loading-status" id="load-msg">Initializing layout modules...</div>
   </div>
 </div>
 
@@ -363,6 +352,9 @@
     <button class="nav-tab" onclick="switchTab('vocab')" id="tab-vocab">
       <i class="fas fa-book-open"></i><span>Vocab</span>
     </button>
+    <button class="nav-tab" onclick="switchTab('sentences')" id="tab-sentences">
+      <i class="fas fa-comments"></i><span>Sentences</span>
+    </button>
     <button class="nav-tab" onclick="switchTab('grammar')" id="tab-grammar">
       <i class="fas fa-scroll"></i><span>Grammar</span>
     </button>
@@ -384,10 +376,21 @@
             <div class="hc-icon"><i class="fas fa-book-open"></i></div>
             <div>
               <h3 class="hc-title">Vocabulary Matrix</h3>
-              <p class="hc-desc">Expressions and vocabulary metrics.</p>
+              <p class="hc-desc">Words, classifications, and parameters.</p>
             </div>
           </div>
           <div class="hc-meta"><span id="home-count-vocab">0</span> <i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="home-card hc-sentences" onclick="switchTab('sentences')">
+          <div class="home-card-body">
+            <div class="hc-icon"><i class="fas fa-comments"></i></div>
+            <div>
+              <h3 class="hc-title">Sentences Matrix</h3>
+              <p class="hc-desc">Syntactic phrase groupings.</p>
+            </div>
+          </div>
+          <div class="hc-meta"><span id="home-count-sentences">0</span> <i class="fas fa-chevron-right"></i></div>
         </div>
 
         <div class="home-card hc-grammar" onclick="switchTab('grammar')">
@@ -417,30 +420,45 @@
     <div class="panel" id="panel-vocab">
       <h2 class="section-title"><i class="fas fa-book-open" style="color:var(--accent)"></i> Vocabulary Matrix</h2>
       <div class="stats-bar">
-        <div class="stat-card"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Total</div></div>
-        <div class="stat-card"><div class="stat-num" id="stat-sentences">0</div><div class="stat-label">Sentences</div></div>
+        <div class="stat-card"><div class="stat-num" id="stat-vocab-total">0</div><div class="stat-label">Total Nouns/Verbs</div></div>
+        <div class="stat-card"><div class="stat-num" id="stat-vocab-tagged">0</div><div class="stat-label">Tagged Items</div></div>
       </div>
 
       <div class="toolbar">
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input type="text" id="vocab-search" placeholder="Search words..." oninput="renderVocab()"/>
+          <input type="text" id="vocab-search" placeholder="Search vocabulary..." oninput="renderVocab()"/>
         </div>
         <div class="toolbar-row">
           <select class="filter-select" id="filter-type" onchange="renderVocab()">
             <option value="">All Types</option>
-            <option value="Word">Words</option>
-            <option value="Sentence">Sentences</option>
-            <option value="Phrase">Phrases</option>
-            <option value="Verb">Verbs</option>
+            <option value="Selfstandig naamwoord">Selfstandig naamwoord</option>
+            <option value="Werkwoord">Werkwoord</option>
+            <option value="Bijvoeglijk naamwoord">Bijvoeglijk naamwoord</option>
+            <option value="Voornaamwoord">Voornaamwoord</option>
+            <option value="Bijwoord">Bijwoord</option>
           </select>
-          <select class="filter-select" id="filter-cat" onchange="renderVocab()">
-            <option value="">All Categories</option>
+          <select class="filter-select" id="filter-article" onchange="renderVocab()">
+            <option value="">All Articles</option>
+            <option value="de">de</option>
+            <option value="het">het</option>
           </select>
         </div>
-        <button class="btn-add" onclick="openVocabModal()"><i class="fas fa-plus"></i> Add Entry</button>
+        <button class="btn-add" onclick="openVocabModal()"><i class="fas fa-plus"></i> Add Vocab Entry</button>
       </div>
       <div class="vocab-list" id="vocab-mobile-container"></div>
+    </div>
+
+    <div class="panel" id="panel-sentences">
+      <h2 class="section-title"><i class="fas fa-comments" style="color:var(--blue)"></i> Sentences Repository</h2>
+      <div class="toolbar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="sentences-search" placeholder="Search sentence expressions..." oninput="renderSentences()"/>
+        </div>
+        <button class="btn-add" onclick="openSentenceModal()"><i class="fas fa-plus"></i> Add Sentence Structure</button>
+      </div>
+      <div class="vocab-list" id="sentences-mobile-container"></div>
     </div>
 
     <div class="panel" id="panel-grammar">
@@ -450,12 +468,6 @@
           <i class="fas fa-search"></i>
           <input type="text" id="grammar-search" placeholder="Search structures..." oninput="renderGrammar()"/>
         </div>
-        <select class="filter-select" id="filter-grammar-type" onchange="renderGrammar()">
-          <option value="">All Types</option>
-          <option value="Grammar Rule">Grammar Rule</option>
-          <option value="Vocabulary Theme">Vocabulary Theme</option>
-          <option value="Pronunciation">Pronunciation</option>
-        </select>
         <button class="btn-add" onclick="openGrammarModal()"><i class="fas fa-plus"></i> Add Rule Directive</button>
       </div>
       <div class="grammar-grid" id="grammar-grid"></div>
@@ -479,23 +491,52 @@
   <div class="modal">
     <h2 class="modal-title" id="vocab-modal-title">Vocabulary Entry</h2>
     <input type="hidden" id="vocab-row-index"/>
-    <div class="field"><label>Dutch Word / Phrase *</label><input type="text" id="v-dutch" placeholder="e.g. Alsjeblieft"/></div>
-    <div class="field"><label>English Translation *</label><input type="text" id="v-english" placeholder="e.g. Please"/></div>
+    <input type="hidden" id="vocab-id"/>
+    
+    <div class="field"><label>Dutch Vocab *</label><input type="text" id="v-dutch" placeholder="e.g. Vrouw"/></div>
+    <div class="field"><label>English Meaning *</label><input type="text" id="v-english" placeholder="e.g. woman"/></div>
+    <div class="field"><label>Arabic Meaning</label><input type="text" id="v-arabic" placeholder="e.g. امرأة"/></div>
+    
     <div class="field">
-      <label>Type</label>
+      <label>Word Type *</label>
       <select id="v-type">
-        <option value="Word">Word</option>
-        <option value="Sentence">Sentence</option>
-        <option value="Phrase">Phrase</option>
-        <option value="Verb">Verb</option>
+        <option value="Selfstandig naamwoord">Selfstandig naamwoord (Noun)</option>
+        <option value="Werkwoord">Werkwoord (Verb)</option>
+        <option value="Bijvoeglijk naamwoord">Bijvoeglijk naamwoord (Adjective)</option>
+        <option value="Voornaamwoord">Voornaamwoord (Pronoun)</option>
+        <option value="Bijwoord">Bijwoord (Adverb)</option>
       </select>
     </div>
-    <div class="field"><label>Category / Tag</label><input type="text" id="v-category" placeholder="Basics, Greetings etc."/></div>
-    <div class="field"><label>Example Sentence</label><input type="text" id="v-example" placeholder="Alsjeblieft, een koffie."/></div>
-    <div class="field"><label>Notes</label><textarea id="v-notes" placeholder="Pronunciation reminders..."></textarea></div>
+    
+    <div class="field">
+      <label>Definite Article</label>
+      <select id="v-article">
+        <option value="">None / Not Applicable</option>
+        <option value="de">de</option>
+        <option value="het">het</option>
+      </select>
+    </div>
+    
+    <div class="field"><label>Plural Variant</label><input type="text" id="v-plural" placeholder="e.g. Vrouwen"/></div>
+    <div class="field"><label>Tags</label><input type="text" id="v-tags" placeholder="Basics, Food, etc."/></div>
+    <div class="field"><label>Parent Link Word (By ID Reference)</label><select id="v-parent-id"><option value="">No Parent Element</option></select></div>
+    
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeModal('vocab-modal')">Cancel</button>
       <button class="btn-save" onclick="saveVocab()">Save Entry</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay hidden" id="sentence-modal">
+  <div class="modal">
+    <h2 class="modal-title" id="sentence-modal-title">Sentence Entry</h2>
+    <input type="hidden" id="sentence-row-index"/>
+    <div class="field"><label>Dutch Sentence Expression *</label><textarea id="s-dutch" placeholder="e.g. De vrouw drinkt sap."></textarea></div>
+    <div class="field"><label>English Translation *</label><textarea id="s-english" placeholder="e.g. The woman drinks juice."></textarea></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal('sentence-modal')">Cancel</button>
+      <button class="btn-save" onclick="saveSentence()">Save Sentence</button>
     </div>
   </div>
 </div>
@@ -511,7 +552,6 @@
         <option value="Grammar Rule">Grammar Rule</option>
         <option value="Vocabulary Theme">Vocabulary Theme</option>
         <option value="Pronunciation">Pronunciation</option>
-        <option value="Other">Other</option>
       </select>
     </div>
     <div class="field"><label>Notes / Structural Logic</label><textarea id="g-notes" placeholder="Write logic bounds..." style="min-height:120px"></textarea></div>
@@ -534,10 +574,10 @@
       <div class="conj-builder">
         <div class="conj-row"><span class="conj-label">ik</span><input class="conj-input" id="c-ik" placeholder="heb"/></div>
         <div class="conj-row"><span class="conj-label">jij/je</span><input class="conj-input" id="c-jij" placeholder="hebt"/></div>
-        <div class="conj-row"><span class="conj-label">hij/zij</span><input class="conj-input" id="c-heeft" placeholder="heeft"/></div>
+        <div class="conj-row"><span class="conj-label">hij/zij</span><input class="conj-input" id="c-hij" placeholder="heeft"/></div>
         <div class="conj-row"><span class="conj-label">wij</span><input class="conj-input" id="c-wij" placeholder="hebben"/></div>
         <div class="conj-row"><span class="conj-label">jullie</span><input class="conj-input" id="c-jullie" placeholder="hebben"/></div>
-        <div class="conj-row"><span class="conj-label">zij (pl.)</span><input class="conj-input" id="c-zij" placeholder="hebben"/></div>
+        <div class="conj-row"><span class="conj-label">zij (pl.)</span><input class="conj-input" id="c-zij-plural" placeholder="hebben"/></div>
       </div>
     </div>
     <div class="modal-actions">
@@ -547,13 +587,16 @@
   </div>
 </div>
 
-<div class="modal-overlay hidden" id="grammar-detail-modal">
-  <div class="modal">
-    <h2 class="modal-title" id="gd-topic">Topic</h2>
-    <div class="detail-notes" id="gd-notes"></div>
+<div class="modal-overlay hidden" id="sentence-lookup-modal">
+  <div class="modal" style="border-top: 3px solid var(--blue);">
+    <h2 class="modal-title" style="color: var(--blue)"><i class="fas fa-search"></i> Connected Sentences</h2>
+    <div style="font-size: 13px; text-align: center; margin-top: -1rem; margin-bottom: 1rem; color: var(--text2);">
+      Matches for contextual token: <b id="lookup-target-token" style="color: var(--text)">—</b>
+    </div>
+    <div id="popup-matched-sentences-container" style="max-height: 40vh; overflow-y: auto; background: var(--bg); border-radius: 10px; border: 1px solid var(--border);">
+      </div>
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('grammar-detail-modal')">Close</button>
-      <button class="btn-save" id="gd-edit-btn">Modify</button>
+      <button class="btn-cancel" onclick="closeModal('sentence-lookup-modal')">Dismiss Window</button>
     </div>
   </div>
 </div>
@@ -562,7 +605,7 @@
   <div class="modal">
     <h2 class="modal-title" id="cd-verb">Verb</h2>
     <div style="font-size:14px; text-align:center; color:var(--text2); margin-top:-1rem; margin-bottom:1rem;" id="cd-translation"></div>
-    <div class="detail-notes" id="cd-notes"></div>
+    <div class="detail-notes" id="cd-notes" style="font-size: 14px; color: var(--text); line-height: 1.5; white-space: pre-wrap; background: var(--accent-light); padding: 0.85rem; border-radius: 10px; margin-bottom: 1rem; border-left: 3px solid var(--accent);"></div>
     <div style="margin-bottom:1rem;"><table class="conj-table" id="cd-table"><tbody></tbody></table></div>
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeModal('conj-detail-modal')">Close</button>
@@ -575,44 +618,22 @@
   <div class="modal">
     <h2 class="modal-title">⚙️ Structural Settings</h2>
     <div class="field"><label>Google Sheet Web App Endpoint</label><input type="text" id="s-web-app-url" readonly style="background:var(--surface2); color:var(--text2); cursor:not-allowed; font-family:'DM Mono', monospace; font-size:11px;"/></div>
-    <div class="field">
-      <label>TTS Language Profile</label>
-      <select id="s-tts-lang">
-        <option value="nl-NL">Dutch (Netherlands)</option>
-        <option value="nl-BE">Dutch (Belgium)</option>
-      </select>
-    </div>
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeModal('settings-modal')">Cancel</button>
-      <button class="btn-save" onclick="saveSettings()">Apply Configuration</button>
+      <button class="btn-save" onclick="closeModal('settings-modal')">Dismiss Config</button>
     </div>
   </div>
 </div>
 
 <script>
-// ==========================================================================
-//   STATIC CONFIGURATION OVERRIDES (HARDCODED CENTRALIZED DEPLOYMENT ARRAYS)
-// ==========================================================================
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz7j8kKGyqzoNrJKtRaixNhIBwnqAunuqc5oAPHWG7XZoLolc4yHZr4MFoiRC7XD0a2eQ/exec';
 
 const VOCAB_SHEET = 'Vocabulary';
+const SENTENCES_SHEET = 'sentences';
 const GRAMMAR_SHEET = 'Grammar';
 const CONJ_SHEET = 'Conjugation';
 
-const VOCAB_COLUMNS = ['Dutch','Translation','Type','Category','Example','Notes','Date'];
-const GRAMMAR_COLUMNS = ['Topic','Type','Notes','Date'];
-const CONJ_COLUMNS = ['Verb','Translation','Notes','Ik','Jij','Hij','Wij','Jullie','Zij','Date'];
-
-let STATE = { ttsLang: 'nl-NL', vocab: [], grammar: [], conjugations: [] };
-
-function save() { localStorage.setItem('mnl_state_orange_v2', JSON.stringify({ttsLang:STATE.ttsLang})); }
-function load() {
-  const d = localStorage.getItem('mnl_state_orange_v2');
-  if (d) { 
-    const p = JSON.parse(d); 
-    STATE.ttsLang = p.ttsLang || 'nl-NL'; 
-  }
-}
+let STATE = { ttsLang: 'nl-NL', vocab: [], sentences: [], grammar: [], conjugations: [] };
 
 async function launchApp() {
   document.getElementById('loading-screen').style.display = 'none';
@@ -621,11 +642,11 @@ async function launchApp() {
 }
 
 async function syncAll() {
-  setStatus('Refreshing structural layouts...', true);
+  setStatus('Refreshing synchronized layouts...', true);
   try {
-    await Promise.all([syncVocab(), syncGrammar(), syncConjugations()]);
+    await Promise.all([syncVocab(), syncSentences(), syncGrammar(), syncConjugations()]);
     setStatus('', false);
-    toast('Data pipelines synchronized ✓', 'success');
+    toast('Data pipelines aligned ✓', 'success');
     updateHomeMetrics();
   } catch(e) {
     setStatus('Connection alignment issue: ' + e.message, true);
@@ -635,99 +656,114 @@ async function syncAll() {
 
 function updateHomeMetrics() {
   document.getElementById('home-count-vocab').textContent = STATE.vocab.length;
+  document.getElementById('home-count-sentences').textContent = STATE.sentences.length;
   document.getElementById('home-count-grammar').textContent = STATE.grammar.length;
   document.getElementById('home-count-conj').textContent = STATE.conjugations.length;
 }
 
 async function syncVocab() {
   const rows = await sheetRead(VOCAB_SHEET);
-  STATE.vocab = rows.slice(1).filter(r => r[0]).map((r,i) => ({
-    rowIndex: i+2,
-    dutch: r[0]||'', translation: r[1]||'', type: r[2]||'Word',
-    category: r[3]||'', example: r[4]||'', notes: r[5]||'', date: r[6]||''
+  // Row Map: id | dutch_vocab | english_meaning | arabic_meaning | word_type | tags | definite_article | plural | parent_link
+  STATE.vocab = rows.slice(1).filter(r => r[0] || r[1]).map((r, i) => ({
+    rowIndex: i + 2,
+    id: parseInt(r[0]) || (i + 1),
+    dutch: r[1] || '',
+    translation: r[2] || '',
+    arabic: r[3] || '',
+    type: r[4] || 'Selfstandig naamwoord',
+    tags: r[5] || '',
+    article: r[6] || '',
+    plural: r[7] || '',
+    parentLink: r[8] || ''
   }));
+  populateParentDropdowns();
   renderVocab();
+}
+
+async function syncSentences() {
+  const rows = await sheetRead(SENTENCES_SHEET);
+  // Row Map: sentence | sentance_english
+  STATE.sentences = rows.slice(1).filter(r => r[0]).map((r, i) => ({
+    rowIndex: i + 2,
+    sentence: r[0] || '',
+    translation: r[1] || ''
+  }));
+  renderSentences();
 }
 
 async function syncGrammar() {
   const rows = await sheetRead(GRAMMAR_SHEET);
-  STATE.grammar = rows.slice(1).filter(r => r[0]).map((r,i) => ({
-    rowIndex: i+2,
-    topic: r[0]||'', type: r[1]||'Grammar Rule', notes: r[2]||'', date: r[3]||''
+  STATE.grammar = rows.slice(1).filter(r => r[0]).map((r, i) => ({
+    rowIndex: i + 2,
+    topic: r[0] || '', type: r[1] || 'Grammar Rule', notes: r[2] || '', date: r[3] || ''
   }));
   renderGrammar();
 }
 
 async function syncConjugations() {
   const rows = await sheetRead(CONJ_SHEET);
-  STATE.conjugations = rows.slice(1).filter(r => r[0]).map((r,i) => ({
-    rowIndex: i+2,
-    verb: r[0]||'', translation: r[1]||'', notes: r[2]||'',
-    ik: r[3]||'', jij: r[4]||'', hij: r[5]||'', wij: r[6]||'', jullie: r[7]||'', zij: r[8]||'',
-    date: r[9]||''
+  STATE.conjugations = rows.slice(1).filter(r => r[0]).map((r, i) => ({
+    rowIndex: i + 2,
+    verb: r[0] || '', translation: r[1] || '', notes: r[2] || '',
+    ik: r[3] || '', jij: r[4] || '', hij: r[5] || '', wij: r[6] || '', jullie: r[7] || '', zij: r[8] || '',
+    date: r[9] || ''
   }));
   renderConjugations();
 }
 
+function populateParentDropdowns() {
+  const select = document.getElementById('v-parent-id');
+  select.innerHTML = '<option value="">No Parent Element</option>' + 
+    STATE.vocab.map(v => `<option value="${v.id}">ID ${v.id} — ${v.dutch} (${v.translation})</option>`).join('');
+}
+
 // ==========================================
-//  MODIFIED API PIPELINES VIA APPS SCRIPT
+//             API FETCH CALLS
 // ==========================================
 async function sheetRead(sheetName) {
   const url = `${WEB_APP_URL}?action=read&sheet=${encodeURIComponent(sheetName)}`;
   const res = await fetch(url);
-  if (!res.ok) throw new Error('API target response invalid.');
+  if (!res.ok) throw new Error('API target validation error.');
   const data = await res.json();
-  if(data.status === "error") throw new Error(data.message);
   return data.values || [];
 }
 
 async function sheetAppend(sheetName, values) {
   const url = `${WEB_APP_URL}?action=append&sheet=${encodeURIComponent(sheetName)}`;
-  const res = await fetch(url, { method: 'POST', body: JSON.stringify({ values: values }) });
-  if (!res.ok) throw new Error('Failed to append entry.');
-  const data = await res.json();
-  if(data.status === "error") throw new Error(data.message);
+  await fetch(url, { method: 'POST', body: JSON.stringify({ values: values }) });
 }
 
 async function sheetUpdate(sheetName, rowIndex, values) {
   const url = `${WEB_APP_URL}?action=update&sheet=${encodeURIComponent(sheetName)}&rowIndex=${rowIndex}`;
-  const res = await fetch(url, { method: 'POST', body: JSON.stringify({ values: values }) });
-  if (!res.ok) throw new Error('Failed to update entry.');
-  const data = await res.json();
-  if(data.status === "error") throw new Error(data.message);
+  await fetch(url, { method: 'POST', body: JSON.stringify({ values: values }) });
 }
 
 async function sheetDeleteRow(sheetName, rowIndex) {
   const url = `${WEB_APP_URL}?action=delete&sheet=${encodeURIComponent(sheetName)}&rowIndex=${rowIndex}`;
-  const res = await fetch(url, { method: 'POST' });
-  if (!res.ok) throw new Error('Failed to delete row.');
-  const data = await res.json();
-  if(data.status === "error") throw new Error(data.message);
+  await fetch(url, { method: 'POST' });
 }
 
+// ==========================================
+//             RENDER FUNCTIONS
+// ==========================================
 function renderVocab() {
   const search = document.getElementById('vocab-search').value.toLowerCase();
   const typeFilter = document.getElementById('filter-type').value;
-  const catFilter = document.getElementById('filter-cat').value;
-  
-  const cats = [...new Set(STATE.vocab.map(v=>v.category).filter(Boolean))];
-  const catSel = document.getElementById('filter-cat');
-  const curCat = catSel.value;
-  catSel.innerHTML = '<option value="">All Categories</option>' + cats.map(c=>`<option value="${c}" ${c===curCat?'selected':''}>${c}</option>`).join('');
+  const articleFilter = document.getElementById('filter-article').value;
 
   const filtered = STATE.vocab.filter(v => {
-    if (search && !v.dutch.toLowerCase().includes(search) && !v.translation.toLowerCase().includes(search)) return false;
+    if (search && !v.dutch.toLowerCase().includes(search) && !v.translation.toLowerCase().includes(search) && !v.arabic.toLowerCase().includes(search)) return false;
     if (typeFilter && v.type !== typeFilter) return false;
-    if (catFilter && v.category !== catFilter) return false;
+    if (articleFilter && v.article !== articleFilter) return false;
     return true;
   });
 
-  document.getElementById('stat-total').textContent = STATE.vocab.length;
-  document.getElementById('stat-sentences').textContent = STATE.vocab.filter(v=>v.type==='Sentence').length;
+  document.getElementById('stat-vocab-total').textContent = STATE.vocab.length;
+  document.getElementById('stat-vocab-tagged').textContent = STATE.vocab.filter(v => v.tags).length;
 
   const container = document.getElementById('vocab-mobile-container');
   if (filtered.length === 0) {
-    container.innerHTML = `<div class="empty-state"><i class="fas fa-layer-group"></i>No matching records found.</div>`;
+    container.innerHTML = `<div class="empty-state"><i class="fas fa-layer-group"></i>No tracking entries match parameters.</div>`;
     return;
   }
 
@@ -735,18 +771,23 @@ function renderVocab() {
     <div class="vocab-mobile-card">
       <div class="vmc-top">
         <div class="vmc-title-box">
-          <span class="vmc-dutch">${esc(v.dutch)}</span>
-          <span class="vmc-trans">${esc(v.translation)}</span>
+          <span class="vmc-dutch">
+            ${v.article ? `<span class="article-badge">${esc(v.article)}</span>` : ''}
+            ${esc(v.dutch)}
+          </span>
+          <span class="vmc-trans">${esc(v.translation)} ${v.arabic ? `| <span style="color:var(--accent); direction:rtl;">${esc(v.arabic)}</span>` : ''}</span>
+          ${v.plural ? `<span class="plural-line">Plural: <b>${esc(v.plural)}</b></span>` : ''}
+          ${v.parentLink ? `<span class="parent-link"><i class="fas fa-link"></i> Parent ID: ${esc(v.parentLink)}</span>` : ''}
         </div>
+        <span style="font-family:'DM Mono',monospace; font-size:11px; background:var(--surface2); padding:2px 6px; border-radius:4px;">ID: ${v.id}</span>
       </div>
       <div class="vmc-tags">
-        <span class="tag type-${v.type.toLowerCase()}">${esc(v.type)}</span>
-        ${v.category ? `<span class="tag">${esc(v.category)}</span>` : ''}
+        <span class="tag type-noun">${esc(v.type)}</span>
+        ${v.tags ? esc(v.tags).split(',').map(t => `<span class="tag">${esc(t.trim())}</span>`).join('') : ''}
       </div>
-      ${v.example ? `<div class="vmc-example">${esc(v.example)}</div>` : ''}
-      ${v.notes ? `<div style="font-size:12px; color:var(--text2); margin-top:4px; padding:0 4px; white-space:pre-wrap;">${esc(v.notes)}</div>` : ''}
       <div class="vmc-actions">
         <button class="btn-sm btn-speak" onclick="speak('${esc(v.dutch)}')"><i class="fas fa-volume-high"></i> Play</button>
+        <button class="btn-sm btn-search-sentences" onclick="lookupSentences('${esc(v.dutch)}')"><i class="fas fa-search-plus"></i> Sentences</button>
         <button class="btn-sm btn-edit" onclick="editVocab(${v.rowIndex})"><i class="fas fa-pen"></i></button>
         <button class="btn-sm btn-del" onclick="deleteVocab(${v.rowIndex})"><i class="fas fa-trash"></i></button>
       </div>
@@ -754,50 +795,76 @@ function renderVocab() {
   `).join('');
 }
 
-const grammarColors = { 'Grammar Rule': {bg:'var(--accent-light)',color:'var(--accent)'}, 'Vocabulary Theme': {bg:'#FFF6F0',color:'var(--orange)'}, 'Pronunciation': {bg:'var(--purple-light)',color:'var(--purple)'} };
+function renderSentences() {
+  const search = document.getElementById('sentences-search').value.toLowerCase();
+  const filtered = STATE.sentences.filter(s => !search || s.sentence.toLowerCase().includes(search) || s.translation.toLowerCase().includes(search));
+
+  const container = document.getElementById('sentences-mobile-container');
+  if (filtered.length === 0) {
+    container.innerHTML = `<div class="empty-state"><i class="fas fa-comments"></i>No sentences parsed.</div>`;
+    return;
+  }
+
+  container.innerHTML = filtered.map(s => `
+    <div class="vocab-mobile-card" style="border-left:4px solid var(--blue)">
+      <div class="vmc-title-box">
+        <span class="psi-dutch">${esc(s.sentence)}</span>
+        <span class="psi-english">${esc(s.translation)}</span>
+      </div>
+      <div class="vmc-actions">
+        <button class="btn-sm btn-speak" onclick="speak('${esc(s.sentence)}')"><i class="fas fa-volume-high"></i> Play</button>
+        <button class="btn-sm btn-edit" onclick="editSentence(${s.rowIndex})"><i class="fas fa-pen"></i></button>
+        <button class="btn-sm btn-del" onclick="deleteSentence(${s.rowIndex})"><i class="fas fa-trash"></i></button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function lookupSentences(word) {
+  document.getElementById('lookup-target-token').textContent = word;
+  const normalizedWord = word.toLowerCase().trim();
+  
+  // Scans layout using exact word boundaries or substring matches
+  const matches = STATE.sentences.filter(s => s.sentence.toLowerCase().includes(normalizedWord));
+  const container = document.getElementById('popup-matched-sentences-container');
+  
+  if (matches.length === 0) {
+    container.innerHTML = `<div class="empty-state" style="padding:1rem;"><i class="fas fa-comment-slash"></i>No direct syntactic matches containing "${word}".</div>`;
+  } else {
+    container.innerHTML = matches.map(s => `
+      <div class="popup-sentence-item">
+        <div class="psi-dutch">${esc(s.sentence)}</div>
+        <div class="psi-english">${esc(s.translation)}</div>
+      </div>
+    `).join('');
+  }
+  openModal('sentence-lookup-modal');
+}
 
 function renderGrammar() {
   const search = document.getElementById('grammar-search').value.toLowerCase();
-  const typeFilter = document.getElementById('filter-grammar-type').value;
-  
-  const filtered = STATE.grammar.filter(g => {
-    if (search && !g.topic.toLowerCase().includes(search) && !g.notes.toLowerCase().includes(search)) return false;
-    if (typeFilter && g.type !== typeFilter) return false;
-    return true;
-  });
+  const filtered = STATE.grammar.filter(g => !search || g.topic.toLowerCase().includes(search) || g.notes.toLowerCase().includes(search));
   
   const grid = document.getElementById('grammar-grid');
   if (filtered.length === 0) {
     grid.innerHTML = `<div class="empty-state"><i class="fas fa-scroll"></i>No guidelines found.</div>`;
     return;
   }
-  grid.innerHTML = filtered.map(g => {
-    const c = grammarColors[g.type] || {bg:'var(--surface2)',color:'var(--text2)'};
-    return `
-    <div class="grammar-card" onclick="showGrammarDetail(${g.rowIndex})">
+  grid.innerHTML = filtered.map(g => `
+    <div class="grammar-card">
       <div class="gc-header">
         <span class="gc-topic">${esc(g.topic)}</span>
-        <span class="gc-type" style="background:${c.bg};color:${c.color}">${esc(g.type)}</span>
+        <span class="gc-type" style="background:var(--accent-light);color:var(--accent)">${esc(g.type)}</span>
       </div>
       <div class="gc-notes">${esc(g.notes)}</div>
       <div class="gc-footer">
-        <span class="gc-date">${g.date}</span>
-        <div class="gc-actions" onclick="event.stopPropagation()">
+        <span class="gc-date">${g.date || ''}</span>
+        <div class="gc-actions">
           <button class="btn-sm btn-edit" onclick="editGrammar(${g.rowIndex})"><i class="fas fa-pen"></i></button>
           <button class="btn-sm btn-del" onclick="deleteGrammar(${g.rowIndex})"><i class="fas fa-trash"></i></button>
         </div>
       </div>
-    </div>`;
-  }).join('');
-}
-
-function showGrammarDetail(rowIndex) {
-  const g = STATE.grammar.find(x=>x.rowIndex===rowIndex);
-  if (!g) return;
-  document.getElementById('gd-topic').textContent = g.topic;
-  document.getElementById('gd-notes').textContent = g.notes;
-  document.getElementById('gd-edit-btn').onclick = () => { closeModal('grammar-detail-modal'); editGrammar(rowIndex); };
-  openModal('grammar-detail-modal');
+    </div>`).join('');
 }
 
 function renderConjugations() {
@@ -810,7 +877,7 @@ function renderConjugations() {
     return;
   }
   grid.innerHTML = filtered.map(c => `
-    <div class="grammar-card" onclick="showConjDetail(${c.rowIndex})" style="border-left: 4px solid var(--green)">
+    <div class="grammar-card" onclick="showConjDetail(${c.rowIndex})" style="border-left: 4px solid var(--green); cursor:pointer;">
       <div class="gc-header">
         <span class="gc-topic">${esc(c.verb)}</span>
         <span class="gc-type" style="background:var(--green-light);color:var(--green)">Present Tense</span>
@@ -818,7 +885,7 @@ function renderConjugations() {
       <div style="font-size:13px; color:var(--text); margin-bottom: 4px; font-family:'DM Mono', monospace">ik ${esc(c.ik || '—')} | jij ${esc(c.jij || '—')} | wij ${esc(c.wij || '—')}</div>
       <div style="font-size:12px; color:var(--text2)">${esc(c.translation)}</div>
       <div class="gc-footer">
-        <span class="gc-date">${c.date}</span>
+        <span class="gc-date">${c.date || ''}</span>
         <div class="gc-actions" onclick="event.stopPropagation()">
           <button class="btn-sm btn-edit" onclick="editConjugation(${c.rowIndex})"><i class="fas fa-pen"></i></button>
           <button class="btn-sm btn-del" onclick="deleteConjugation(${c.rowIndex})"><i class="fas fa-trash"></i></button>
@@ -828,134 +895,196 @@ function renderConjugations() {
 }
 
 function showConjDetail(rowIndex) {
-  const c = STATE.conjugations.find(x=>x.rowIndex===rowIndex);
+  const c = STATE.conjugations.find(x => x.rowIndex === rowIndex);
   if (!c) return;
   document.getElementById('cd-verb').textContent = c.verb;
   document.getElementById('cd-translation').textContent = c.translation;
-  document.getElementById('cd-notes').textContent = c.notes || 'No active notes mapped.';
+  document.getElementById('cd-notes').textContent = c.notes || 'No operational layout parameters defined.';
   
   const tbody = document.getElementById('cd-table').querySelector('tbody');
-  const items = [['ik (I)', c.ik], ['jij/je (you)', c.jij], ['hij/zij (he/she)', c.hij], ['wij/we (we)', c.wij], ['jullie (you pl)', c.jullie], ['zij/ze (they)', c.zij]];
-  tbody.innerHTML = items.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1]) || '—'}</td></tr>`).join('');
-  
+  tbody.innerHTML = `
+    <tr><td>ik (I)</td><td>${esc(c.ik) || '—'}</td></tr>
+    <tr><td>jij/je (you)</td><td>${esc(c.jij) || '—'}</td></tr>
+    <tr><td>hij/zij (he/she)</td><td>${esc(c.hij) || '—'}</td></tr>
+    <tr><td>wij/we (we)</td><td>${esc(c.wij) || '—'}</td></tr>
+    <tr><td>jullie (you pl)</td><td>${esc(c.jullie) || '—'}</td></tr>
+    <tr><td>zij/ze (they)</td><td>${esc(c.zij) || '—'}</td></tr>
+  `;
   document.getElementById('cd-edit-btn').onclick = () => { closeModal('conj-detail-modal'); editConjugation(rowIndex); };
   openModal('conj-detail-modal');
 }
 
-function openVocabModal(data=null) {
-  document.getElementById('vocab-modal-title').textContent = data ? 'Modify Matrix Item' : 'Add Vocabulary Entry';
+// ==========================================
+//             MODAL CONTROLS & SAVE
+// ==========================================
+function openVocabModal(data = null) {
+  document.getElementById('vocab-modal-title').textContent = data ? 'Modify Lexical Matrix' : 'Add New Lexical Word';
   document.getElementById('vocab-row-index').value = data ? data.rowIndex : '';
-  document.getElementById('v-dutch').value = data?.dutch||'';
-  document.getElementById('v-english').value = data?.translation||'';
-  document.getElementById('v-type').value = data?.type||'Word';
-  document.getElementById('v-category').value = data?.category||'';
-  document.getElementById('v-example').value = data?.example||'';
-  document.getElementById('v-notes').value = data?.notes||'';
+  
+  // Computes next auto-increment sequence ID parameter safely
+  if (!data) {
+    const nextId = STATE.vocab.length > 0 ? Math.max(...STATE.vocab.map(v => v.id)) + 1 : 1;
+    document.getElementById('vocab-id').value = nextId;
+  } else {
+    document.getElementById('vocab-id').value = data.id;
+  }
+
+  document.getElementById('v-dutch').value = data ? data.dutch : '';
+  document.getElementById('v-english').value = data ? data.translation : '';
+  document.getElementById('v-arabic').value = data ? data.arabic : '';
+  document.getElementById('v-type').value = data ? data.type : 'Selfstandig naamwoord';
+  document.getElementById('v-article').value = data ? data.article : '';
+  document.getElementById('v-plural').value = data ? data.plural : '';
+  document.getElementById('v-tags').value = data ? data.tags : '';
+  document.getElementById('v-parent-id').value = data ? data.parentLink : '';
   openModal('vocab-modal');
 }
-
-function editVocab(rowIndex) { const e = STATE.vocab.find(v=>v.rowIndex===rowIndex); if (e) openVocabModal(e); }
 
 async function saveVocab() {
   const dutch = document.getElementById('v-dutch').value.trim();
   const english = document.getElementById('v-english').value.trim();
-  if (!dutch || !english) { toast('Fields are required', 'error'); return; }
+  if (!dutch || !english) { toast('Required parameters missing.', 'error'); return; }
+  
   const rIdx = document.getElementById('vocab-row-index').value;
-  const date = new Date().toLocaleDateString('en-GB');
-  const values = [dutch, english, document.getElementById('v-type').value, document.getElementById('v-category').value.trim(), document.getElementById('v-example').value.trim(), document.getElementById('v-notes').value.trim(), date];
+  const id = document.getElementById('vocab-id').value;
+  
+  // Array positions mapping directly into photo 1 column orientation headers
+  const values = [
+    id, 
+    dutch, 
+    english, 
+    document.getElementById('v-arabic').value.trim(), 
+    document.getElementById('v-type').value, 
+    document.getElementById('v-tags').value.trim(), 
+    document.getElementById('v-article').value, 
+    document.getElementById('v-plural').value.trim(),
+    document.getElementById('v-parent-id').value
+  ];
+
   try {
+    setStatus('Committing lexical record updates...', true);
     if (rIdx) await sheetUpdate(VOCAB_SHEET, parseInt(rIdx), values);
     else await sheetAppend(VOCAB_SHEET, values);
     closeModal('vocab-modal');
-    toast('Entry saved successfully ✓', 'success');
+    toast('Vocab entry updated ✓', 'success');
     await syncVocab(); updateHomeMetrics();
-  } catch(e) { toast('Write process encountered an error', 'error'); }
+  } catch(e) { toast('Database commit rejection.', 'error'); }
+  finally { setStatus('', false); }
 }
 
 async function deleteVocab(rowIndex) {
-  if (!confirm('Purge structural item?')) return;
+  if (!confirm('Drop structural element item row?')) return;
   try {
+    setStatus('Purging record indexes...', true);
     await sheetDeleteRow(VOCAB_SHEET, rowIndex);
-    toast('Cleared element from storage', 'success');
+    toast('Record eliminated.', 'success');
     await syncVocab(); updateHomeMetrics();
-  } catch(e) { toast('Mutation failed', 'error'); }
+  } catch(e) { toast('Drop sequence failed.', 'error'); }
+  finally { setStatus('', false); }
 }
 
-function openGrammarModal(data=null) {
-  document.getElementById('grammar-modal-title').textContent = data ? 'Modify Structural Rules' : 'Add Grammar Rule';
+function openSentenceModal(data = null) {
+  document.getElementById('sentence-modal-title').textContent = data ? 'Modify Sentence Element' : 'Add Phrase Struct';
+  document.getElementById('sentence-row-index').value = data ? data.rowIndex : '';
+  document.getElementById('s-dutch').value = data ? data.sentence : '';
+  document.getElementById('s-english').value = data ? data.translation : '';
+  openModal('sentence-modal');
+}
+
+function editSentence(rowIndex) {
+  const s = STATE.sentences.find(x => x.rowIndex === rowIndex);
+  if (s) openSentenceModal(s);
+}
+
+async function saveSentence() {
+  const dutch = document.getElementById('s-dutch').value.trim();
+  const english = document.getElementById('s-english').value.trim();
+  if (!dutch || !english) { toast('Fields cannot be empty.', 'error'); return; }
+
+  const rIdx = document.getElementById('sentence-row-index').value;
+  const values = [dutch, english]; // Maps to [sentence, sentance_english]
+
+  try {
+    setStatus('Committing syntactic models...', true);
+    if (rIdx) await sheetUpdate(SENTENCES_SHEET, parseInt(rIdx), values);
+    else await sheetAppend(SENTENCES_SHEET, values);
+    closeModal('sentence-modal');
+    toast('Sentence framework saved ✓', 'success');
+    await syncSentences(); updateHomeMetrics();
+  } catch(e) { toast('Write trace exception.', 'error'); }
+  finally { setStatus('', false); }
+}
+
+async function deleteSentence(rowIndex) {
+  if (!confirm('Purge target sentence context row?')) return;
+  try {
+    setStatus('Dropping row sequence...', true);
+    await sheetDeleteRow(SENTENCES_SHEET, rowIndex);
+    toast('Sentence row removed.', 'success');
+    await syncSentences(); updateHomeMetrics();
+  } catch(e) { toast('Deletion failed.', 'error'); }
+  finally { setStatus('', false); }
+}
+
+function editVocab(rowIndex) { const e = STATE.vocab.find(v => v.rowIndex === rowIndex); if (e) openVocabModal(e); }
+function openGrammarModal(data = null) {
+  document.getElementById('grammar-modal-title').textContent = data ? 'Modify System Directives' : 'Add Grammar Directive';
   document.getElementById('grammar-row-index').value = data ? data.rowIndex : '';
-  document.getElementById('g-topic').value = data?.topic||'';
-  document.getElementById('g-type').value = data?.type||'Grammar Rule';
-  document.getElementById('g-notes').value = data?.notes||'';
+  document.getElementById('g-topic').value = data ? data.topic : '';
+  document.getElementById('g-type').value = data ? data.type : 'Grammar Rule';
+  document.getElementById('g-notes').value = data ? data.notes : '';
   openModal('grammar-modal');
 }
-
-function editGrammar(rowIndex) { const e = STATE.grammar.find(g=>g.rowIndex===rowIndex); if (e) openGrammarModal(e); }
-
+function editGrammar(rowIndex) { const e = STATE.grammar.find(g => g.rowIndex === rowIndex); if (e) openGrammarModal(e); }
 async function saveGrammar() {
   const topic = document.getElementById('g-topic').value.trim();
-  if (!topic) { toast('Topic name parameter required', 'error'); return; }
+  if (!topic) return;
   const rIdx = document.getElementById('grammar-row-index').value;
-  const date = new Date().toLocaleDateString('en-GB');
-  const values = [topic, document.getElementById('g-type').value, document.getElementById('g-notes').value.trim(), date];
+  const values = [topic, document.getElementById('g-type').value, document.getElementById('g-notes').value.trim(), new Date().toLocaleDateString('en-GB')];
   try {
     if (rIdx) await sheetUpdate(GRAMMAR_SHEET, parseInt(rIdx), values);
     else await sheetAppend(GRAMMAR_SHEET, values);
     closeModal('grammar-modal');
-    toast('Syntax construct committed ✓', 'success');
     await syncGrammar(); updateHomeMetrics();
-  } catch(e) { toast('Write context trace failed', 'error'); }
+  } catch(e) { toast('Error saving rule', 'error'); }
 }
-
 async function deleteGrammar(rowIndex) {
-  if (!confirm('Drop layout rule record?')) return;
-  try {
-    await sheetDeleteRow(GRAMMAR_SHEET, rowIndex);
-    toast('Record dropped', 'success');
-    await syncGrammar(); updateHomeMetrics();
-  } catch(e) { toast('Drop sequence failed', 'error'); }
+  if (!confirm('Drop layout rule?')) return;
+  await sheetDeleteRow(GRAMMAR_SHEET, rowIndex);
+  await syncGrammar(); updateHomeMetrics();
 }
 
-function openConjModal(data=null) {
-  document.getElementById('conj-modal-title').textContent = data ? 'Edit Paradigm Array' : 'Map Verb System';
+function openConjModal(data = null) {
+  document.getElementById('conj-modal-title').textContent = data ? 'Modify Paradigm Track' : 'Map Verb System';
   document.getElementById('conj-row-index').value = data ? data.rowIndex : '';
-  document.getElementById('c-verb').value = data?.verb||'';
-  document.getElementById('c-translation').value = data?.translation||'';
-  document.getElementById('c-notes').value = data?.notes||'';
-  document.getElementById('c-ik').value = data?.ik||'';
-  document.getElementById('c-jij').value = data?.jij||'';
-  document.getElementById('c-hij').value = data?.hij||'';
-  document.getElementById('c-wij').value = data?.wij||'';
-  document.getElementById('c-jullie').value = data?.jullie||'';
-  document.getElementById('c-zij').value = data?.zij||'';
+  document.getElementById('c-verb').value = data ? data.verb : '';
+  document.getElementById('c-translation').value = data ? data.translation : '';
+  document.getElementById('c-notes').value = data ? data.notes : '';
+  document.getElementById('c-ik').value = data ? data.ik : '';
+  document.getElementById('c-jij').value = data ? data.jij : '';
+  document.getElementById('c-hij').value = data ? data.hij : '';
+  document.getElementById('c-wij').value = data ? data.wij : '';
+  document.getElementById('c-jullie').value = data ? data.jullie : '';
+  document.getElementById('c-zij-plural').value = data ? data.zij : '';
   openModal('conj-modal');
 }
-
-function editConjugation(rowIndex) { const e = STATE.conjugations.find(c=>c.rowIndex===rowIndex); if (e) openConjModal(e); }
-
+function editConjugation(rowIndex) { const e = STATE.conjugations.find(c => c.rowIndex === rowIndex); if (e) openConjModal(e); }
 async function saveConjugation() {
   const verb = document.getElementById('c-verb').value.trim();
-  const trans = document.getElementById('c-translation').value.trim();
-  if (!verb || !trans) { toast('Infinitive fields are required', 'error'); return; }
+  if (!verb) return;
   const rIdx = document.getElementById('conj-row-index').value;
-  const date = new Date().toLocaleDateString('en-GB');
-  const values = [verb, trans, document.getElementById('c-notes').value.trim(), document.getElementById('c-ik').value.trim(), document.getElementById('c-jij').value.trim(), document.getElementById('c-hij').value.trim(), document.getElementById('c-wij').value.trim(), document.getElementById('c-jullie').value.trim(), document.getElementById('c-zij').value.trim(), date];
+  const values = [verb, document.getElementById('c-translation').value.trim(), document.getElementById('c-notes').value.trim(), document.getElementById('c-ik').value.trim(), document.getElementById('c-jij').value.trim(), document.getElementById('c-hij').value.trim(), document.getElementById('c-wij').value.trim(), document.getElementById('c-jullie').value.trim(), document.getElementById('c-zij-plural').value.trim(), new Date().toLocaleDateString('en-GB')];
   try {
     if (rIdx) await sheetUpdate(CONJ_SHEET, parseInt(rIdx), values);
     else await sheetAppend(CONJ_SHEET, values);
     closeModal('conj-modal');
-    toast('Paradigm matrix structured ✓', 'success');
     await syncConjugations(); updateHomeMetrics();
-  } catch(e) { toast('Sync verification failure', 'error'); }
+  } catch(e) { toast('Error saving verb template', 'error'); }
 }
-
 async function deleteConjugation(rowIndex) {
-  if (!confirm('Drop structural paradigm track?')) return;
-  try {
-    await sheetDeleteRow(CONJ_SHEET, rowIndex);
-    toast('Track array dropped', 'success');
-    await syncConjugations(); updateHomeMetrics();
-  } catch(e) { toast('Drop track exception', 'error'); }
+  if (!confirm('Drop verb paradigm trace?')) return;
+  await sheetDeleteRow(CONJ_SHEET, rowIndex);
+  await syncConjugations(); updateHomeMetrics();
 }
 
 function speak(text) {
@@ -965,49 +1094,32 @@ function speak(text) {
   u.lang = STATE.ttsLang; u.rate = 0.82;
   window.speechSynthesis.speak(u);
 }
-
-function showSettings() {
-  document.getElementById('s-web-app-url').value = WEB_APP_URL;
-  document.getElementById('s-tts-lang').value = STATE.ttsLang;
-  openModal('settings-modal');
-}
-
-function saveSettings() {
-  STATE.ttsLang = document.getElementById('s-tts-lang').value;
-  save(); closeModal('settings-modal');
-  toast('Config parameters applied ✓', 'success');
-}
-
+function showSettings() { openModal('settings-modal'); }
 function switchTab(tabId) {
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('panel-'+tabId).classList.add('active');
-  const t = document.getElementById('tab-'+tabId); if (t) t.classList.add('active');
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + tabId).classList.add('active');
+  const t = document.getElementById('tab-' + tabId); if (t) t.classList.add('active');
   window.scrollTo(0,0);
 }
-
 function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
 function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
-
 document.querySelectorAll('.modal-overlay').forEach(ov => {
   ov.addEventListener('click', function(e) { if (e.target === this) this.classList.add('hidden'); });
 });
-
 function setStatus(msg, visible) {
   const bar = document.getElementById('status-bar');
   if (visible) { bar.classList.remove('hidden'); document.getElementById('status-msg').textContent = msg; }
   else bar.classList.add('hidden');
 }
 function retrySync() { syncAll(); }
-function toast(msg, type='success') {
+function toast(msg, type = 'success') {
   const t = document.createElement('div'); t.className = `toast ${type}`;
-  t.innerHTML = `<i class="fas fa-${type==='success'?'check':'exclamation-triangle'}"></i> ${msg}`;
+  t.innerHTML = `<i class="fas fa-${type === 'success' ? 'check' : 'exclamation-triangle'}"></i> ${msg}`;
   document.body.appendChild(t); setTimeout(() => t.remove(), 2400);
 }
-function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function esc(s) { return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-// AUTOMATED CORE INITIALIZATION FLOW
-load();
 launchApp();
 </script>
 </body>
