@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
-<title>🇳🇱 THE DUTCH DREAM — Dutch Learning System</title>
+<title>THE DEUTSCH DREAM — Deutsches Lernsystem</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23E05A16'/%3E%3Ctext x='50%25' y='53%25' font-family='system-ui, -apple-system, sans-serif' font-weight='800' font-size='72' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='central'%3EDE%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E05A16'/%3E%3Ctext x='50%25' y='53%25' font-family='system-ui, -apple-system, sans-serif' font-weight='bold' font-size='14' fill='%23FFFFFF' text-anchor='middle' dominant-baseline='central'%3EDE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -14,11 +19,11 @@
     --surface2: #F3ECE0;
     --text: #1C1A14;
     --text2: #6B6152;
-    --accent: #E05A16; 
-    --accent-dark: #B8430A;
-    --accent-light: #FDF2EB;
-    --orange: #E05A16;
-    --orange-light: #FDF2EB;
+    --accent: #C8281E; 
+    --accent-dark: #A01F17;
+    --accent-light: #FDF3F2;
+    --orange: #C8281E;
+    --orange-light: #FDF3F2;
     --green: #2A7A4B;
     --green-light: #E6F4ED;
     --purple: #7C3AED;
@@ -27,10 +32,10 @@
     --blue-light: #EBF8FF;
     --red: #C0392B;
     --red-light: #FDECEA;
-    --border: rgba(224, 90, 22, 0.12);
+    --border: rgba(200, 40, 30, 0.12);
     --border-dark: rgba(0, 0, 0, 0.08);
     --radius: 14px;
-    --shadow: 0 4px 16px rgba(224, 90, 22, 0.05);
+    --shadow: 0 4px 16px rgba(0,0,0,0.06);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   body {
@@ -50,7 +55,7 @@
     align-items: center;
     justify-content: center;
     padding: 1.2rem;
-    background: linear-gradient(135deg, var(--bg) 0%, var(--accent-light) 100%);
+    background: linear-gradient(160deg, #FDFCF8 0%, #F9EDED 50%, #FDFCF8 100%);
   }
   .loading-card {
     background: var(--surface);
@@ -58,7 +63,7 @@
     padding: 2rem 1.5rem;
     max-width: 400px;
     width: 100%;
-    box-shadow: 0 10px 30px rgba(224, 90, 22, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border: 1px solid var(--border);
     text-align: center;
   }
@@ -113,7 +118,7 @@
     -webkit-backdrop-filter: blur(12px);
     border-top: 1px solid var(--border);
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     height: calc(64px + env(safe-area-inset-bottom));
     padding-bottom: env(safe-area-inset-bottom);
     z-index: 900;
@@ -211,8 +216,9 @@
   .vmc-title-box { display: flex; flex-direction: column; }
   
   .article-badge { padding: 2px 7px; border-radius: 5px; font-size: 11px; font-weight: 700; margin-right: 6px; color: white; text-transform: lowercase; }
-  .article-badge.de { background: #2B6CB0; } 
-  .article-badge.het { background: #2A7A4B; } 
+  .article-badge.der { background: #2B6CB0; } 
+  .article-badge.die { background: #7C3AED; }
+.article-badge.das { background: #2A7A4B; } 
 
   .plural-line { font-size: 12px; color: var(--text2); margin-top: 4px; font-style: italic; background: #FAF5FF; padding: 3px 8px; border-radius: 6px; border-left: 2px solid #9F7AEA; display: inline-block; width: max-content; }
   .parent-link { font-size: 11px; font-family: 'DM Mono', monospace; background: var(--surface2); color: var(--text2); padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; width: max-content; }
@@ -399,49 +405,261 @@
   .style-rendered-html-content th { background: var(--surface2); text-align: left; font-weight: 600; color: var(--text); border: 1px solid rgba(0, 0, 0, 0.08) !important; padding: 8px 10px !important; font-size: 13px; }
   .style-rendered-html-content td { border: 1px solid rgba(0, 0, 0, 0.08) !important; padding: 6px 10px !important; font-size: 13px; }
   .style-rendered-html-content tr:nth-child(even) { background: rgba(224, 90, 22, 0.02); }
+
+/* Vocab Tags Screen */
+.tag-screen-actions{display:flex; gap:8px; margin-bottom:1rem;}
+.btn-secondary{width:100%; padding:0.75rem; background:var(--surface2); color:var(--text); border:none; border-radius:10px; font-size:14px; font-weight:600; display:flex; align-items:center; justify-content:center; gap:0.4rem; cursor:pointer;}
+.btn-secondary:active{background:#E9E0D2;}
+.tag-group{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;}
+.tag-group summary{list-style:none; cursor:pointer; padding:0.9rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:10px;}
+.tag-group summary::-webkit-details-marker{display:none;}
+.tag-group-title{display:flex; align-items:center; gap:10px; font-weight:700;}
+.tag-pill{display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:999px; font-size:11px; font-weight:700; background:var(--accent-light); color:var(--accent);}
+.tag-count{font-size:12px; font-weight:700; color:var(--text2); background:var(--bg); border:1px solid var(--border-dark); padding:3px 8px; border-radius:999px; white-space:nowrap;}
+.tag-items{padding:0.75rem 1rem 1rem 1rem; border-top:1px solid var(--border-dark); background:var(--bg); display:flex; flex-direction:column; gap:8px;}
+.tag-item{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px; display:flex; align-items:center; justify-content:space-between; gap:10px;}
+.tag-item-main{display:flex; flex-direction:column; gap:2px; flex:1;}
+.tag-item-dutch{font-weight:700; font-size:14px; color:var(--text);}
+.tag-item-trans{font-size:12.5px; color:var(--text2);}
+.tag-item-actions{display:flex; gap:6px; align-items:center;}
+.btn-mini{border:none; background:var(--surface2); color:var(--text); width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center; cursor:pointer;}
+.btn-mini:active{background:var(--accent-light); color:var(--accent);}
+
+
+/* German flag badge */
+.de-badge{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ width:34px;
+ height:34px;
+ border-radius:10px;
+ overflow:hidden;
+ flex-direction:column;
+ gap:0;
+ flex-shrink:0;
+ border: 1.5px solid rgba(0,0,0,0.10);
+}
+.de-badge-strip{ width:100%; flex:1; }
+.de-black { background:#1C1C1C; }
+.de-red   { background:#C8281E; }
+.de-gold  { background:#DDAD2E; }
+.loading-flag{
+ font-size:3.5rem;
+}
+
+
+ .hc-practice .hc-icon { background: #FFF7ED; color: #C2410C; }
+
+/* --- Practice Setup Screen --- */
+#panel-practice { padding-bottom: 1rem; }
+#panel-practice-play { padding-bottom: calc(170px + env(safe-area-inset-bottom)); }
+
+/* Setup: mode grid */
+.practice-setup-header { margin-bottom: 1.25rem; }
+.practice-setup-header h3 { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600; color: var(--accent-dark); margin-bottom: 0.2rem; }
+.practice-setup-header p { font-size: 13px; color: var(--text2); }
+
+.practice-modes { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 16px; }
+
+.mode-tile {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 14px 12px; border-radius: 16px;
+  border: 1.5px solid var(--border); background: var(--surface);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03); cursor: pointer;
+  transition: border-color 150ms, background 150ms;
+  text-align: left;
+}
+.mode-tile-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 15px; transition: background 150ms, color 150ms;
+}
+/* distinct colors per mode category */
+.mode-tile[data-mode="listen_word_dutch"] .mode-tile-icon,
+.mode-tile[data-mode="listen_sentence_dutch"] .mode-tile-icon { background:#EBF8FF; color:#2B6CB0; }
+.mode-tile[data-mode="see_translation_word_dutch"] .mode-tile-icon,
+.mode-tile[data-mode="see_translation_sentence_dutch"] .mode-tile-icon { background:var(--purple-light); color:var(--purple); }
+.mode-tile[data-mode="see_dutch_word_english"] .mode-tile-icon,
+.mode-tile[data-mode="see_dutch_sentence_english"] .mode-tile-icon { background:var(--green-light); color:var(--green); }
+.mode-tile[data-mode="conj_english_full"] .mode-tile-icon,
+.mode-tile[data-mode="conj_pronoun_dutch"] .mode-tile-icon { background:#FFF7ED; color:#C2410C; }
+
+.mt-title { font-weight: 800; font-size: 12.5px; color: var(--text); line-height: 1.3; }
+.mt-sub { font-size: 10.5px; color: var(--text2); font-weight: 600; margin-top: 1px; }
+
+.mode-tile.active { border-color: var(--accent); background: linear-gradient(160deg, rgba(224,90,22,0.06) 0%, white 100%); }
+.mode-tile.active .mode-tile-icon { background: var(--accent) !important; color: white !important; }
+
+/* Setup: empty state warning */
+.practice-empty-warning {
+  display: none; background: var(--red-light); border: 1px solid rgba(192,57,43,0.18);
+  border-radius: 14px; padding: 14px; margin-bottom: 12px;
+  font-size: 13px; color: var(--red); font-weight: 600;
+}
+.practice-empty-warning a { color: var(--accent); text-decoration: underline; cursor: pointer; }
+
+/* --- Practice Play Screen --- */
+/* Slim live stats bar at top of play screen */
+.practice-live-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 12px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 14px;
+  margin-bottom: 12px; opacity: 0; transition: opacity 300ms;
+}
+.practice-live-bar.visible { opacity: 1; }
+.plb-left { display: flex; align-items: center; gap: 10px; }
+.plb-badge { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 800;
+  padding: 3px 9px; border-radius: 999px; }
+.plb-mode { background: #FFF7ED; color: #C2410C; border: 1px solid rgba(194,65,12,0.18); }
+.plb-score { background: var(--bg); color: var(--text2); border: 1px solid var(--border-dark); }
+.plb-streak { background: var(--bg); color: var(--text2); border: 1px solid var(--border-dark); }
+.plb-right { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+.plb-streak-label { font-size: 10px; color: var(--text2); font-weight: 700; }
+.plb-progress { width: 80px; height: 7px; border-radius: 999px; background: rgba(224,90,22,0.10); overflow: hidden; }
+.plb-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg,#E05A16,#F97316); border-radius: 999px; transition: width 250ms ease; }
+
+/* Prompt card */
+.practice-prompt-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 18px; padding: 16px; margin-bottom: 10px;
+  box-shadow: var(--shadow);
+}
+.ppc-head { display: flex; gap: 12px; align-items: flex-start; }
+.ppc-icon {
+  width: 42px; height: 42px; min-width: 42px; border-radius: 13px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; background: var(--accent-light); color: var(--accent);
+}
+.ppc-label { font-size: 10px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--text2); margin-bottom: 3px; }
+.ppc-main { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; color: var(--text); line-height: 1.35; }
+.ppc-sub {
+  margin-top: 10px; font-size: 13px; color: var(--text2); line-height: 1.6;
+  background: var(--bg); border: 1px solid var(--border-dark);
+  padding: 10px 13px; border-radius: 12px;
+}
+
+/* Feedback banner — sits between prompt and answer */
+.practice-feedback {
+  margin: 8px 0; font-size: 14px; font-weight: 700;
+  padding: 11px 14px; border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06); display: none;
+  line-height: 1.5;
+}
+.practice-feedback.neutral { background:#EEF2FF; color:#3730A3; border-color:rgba(55,48,163,0.18); }
+.practice-feedback.good { background:var(--green-light); color:var(--green); border-color:rgba(42,122,75,0.18); }
+.practice-feedback.bad { background:var(--red-light); color:var(--red); border-color:rgba(192,57,43,0.18); }
+@keyframes pop { 0%{transform:scale(0.98);} 60%{transform:scale(1.03);} 100%{transform:scale(1);} }
+@keyframes shake { 0%,100%{transform:translateX(0);} 20%{transform:translateX(-6px);} 40%{transform:translateX(6px);} 60%{transform:translateX(-4px);} 80%{transform:translateX(4px);} }
+.practice-feedback.animate-pop { animation: pop 220ms ease; }
+.practice-feedback.animate-shake { animation: shake 320ms ease; }
+
+/* Answer area */
+.practice-answer-wrap { margin-bottom: 10px; }
+.practice-answer-wrap textarea {
+  width: 100%; padding: 0.85rem; border: 1.5px solid var(--border-dark);
+  border-radius: 16px; font-size: 16px; background: var(--surface);
+  outline: none; font-family: 'Instrument Sans', sans-serif;
+  resize: none; transition: border-color 150ms, box-shadow 150ms;
+}
+.practice-answer-wrap textarea:focus {
+  border-color: rgba(224,90,22,0.7);
+  box-shadow: 0 0 0 3px rgba(224,90,22,0.12);
+}
+
+/* Sticky action bar */
+#panel-practice-play .practice-stickybar { display: none; }
+#panel-practice-play.active .practice-stickybar { display: block; }
+.practice-stickybar {
+  position: fixed; left: 0; right: 0;
+  bottom: calc(64px + env(safe-area-inset-bottom));
+  z-index: 880; background: rgba(253,251,247,0.95);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--border);
+  padding: 10px 1rem;
+}
+.practice-sticky-inner { max-width: 960px; margin: 0 auto; }
+/* Secondary row: ghost-style small buttons */
+.practice-actions-secondary {
+  display: flex; gap: 8px; margin-bottom: 8px;
+}
+.btn-ghost {
+  flex: 1; padding: 0.5rem; background: transparent;
+  border: 1px solid var(--border-dark); border-radius: 10px;
+  font-size: 13px; font-weight: 600; color: var(--text2);
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  cursor: pointer;
+}
+.btn-ghost:active { background: var(--surface2); }
+/* Primary row: Check (dominant) + Next (secondary weight) */
+.practice-actions-primary { display: flex; gap: 8px; }
+.btn-check {
+  flex: 2; padding: 0.75rem; background: var(--accent); color: white;
+  border: none; border-radius: 12px; font-size: 15px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; box-shadow: 0 3px 10px rgba(224,90,22,0.22);
+}
+.btn-check:active { background: var(--accent-dark); }
+.btn-next {
+  flex: 1; padding: 0.75rem; background: var(--surface2); color: var(--text);
+  border: none; border-radius: 12px; font-size: 14px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer;
+}
+.btn-next:active { background: #E0D5C4; }
+
+/* Play head */
+.practice-play-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.practice-back { width: auto; padding: 0.55rem 0.9rem; }
+
+@media (min-width: 520px) { .practice-modes { grid-template-columns: repeat(4,1fr); } }
+
+
+
 </style>
 </head>
 <body>
 
 <div id="loading-screen">
   <div class="loading-card">
-    <div class="loading-flag">🇳🇱</div>
-    <h1 class="loading-title">THE DUTCH DREAM</h1>
-    <div class="loading-status" id="load-msg">Initializing layout modules...</div>
+    <div style="font-size:3.5rem; margin-bottom:0.5rem; animation: pulse 1.5s infinite ease-in-out;">🇩🇪</div>
+    <h1 class="loading-title">THE DEUTSCH DREAM</h1>
+    <div class="loading-status" id="load-msg">Alles wird vorbereitet...</div>
   </div>
 </div>
 
 <div id="app">
   <div class="status-bar hidden" id="status-bar">
-    <span id="status-msg">Syncing database matrices...</span>
-    <a onclick="retrySync()">Retry</a>
+    <span id="status-msg">Daten werden synchronisiert...</span>
+    <a onclick="retrySync()">Erneut versuchen</a>
   </div>
 
   <header>
-    <div class="logo" onclick="switchTab('home')">🇳🇱 <span>THE DUTCH DREAM</span></div>
+    <div class="logo" onclick="switchTab('home')"><span class="de-badge"><span class="de-badge-strip de-black"></span><span class="de-badge-strip de-red"></span><span class="de-badge-strip de-gold"></span></span> <span>THE DEUTSCH DREAM</span></div>
     <div class="header-actions">
-      <button class="btn-icon" title="Sync Layout" onclick="syncAll()"><i class="fas fa-rotate"></i></button>
-      <button class="btn-icon" title="Settings" onclick="showSettings()"><i class="fas fa-gear"></i></button>
+      <button class="btn-icon" title="Synchronisieren" onclick="syncAll()"><i class="fas fa-rotate"></i></button>
+      <button class="btn-icon" title="Einstellungen" onclick="showSettings()"><i class="fas fa-gear"></i></button>
     </div>
   </header>
 
   <nav class="bottom-nav">
     <button class="nav-tab" onclick="switchTab('vocab')" id="tab-vocab">
-      <i class="fas fa-book-open"></i><span>Vocabulary</span>
+      <i class="fas fa-book-open"></i><span>Vokabular</span>
     </button>
     <button class="nav-tab" onclick="switchTab('sentences')" id="tab-sentences">
-      <i class="fas fa-comments"></i><span>Sentences</span>
+      <i class="fas fa-comments"></i><span>Sätze</span>
     </button>
     <button class="nav-tab active" onclick="switchTab('home')" id="tab-home">
-      <i class="fas fa-house"></i><span>Home</span>
+      <i class="fas fa-house"></i><span>Startseite</span>
     </button>
     <button class="nav-tab" onclick="switchTab('grammar')" id="tab-grammar">
-      <i class="fas fa-scroll"></i><span>Grammar</span>
+      <i class="fas fa-scroll"></i><span>Grammatik</span>
     </button>
     <button class="nav-tab" onclick="switchTab('conjugation')" id="tab-conjugation">
-      <i class="fas fa-table-cells"></i><span>Verbs Conjugations</span>
+      <i class="fas fa-table-cells"></i><span>Konjugation</span>
     </button>
-  </nav>
+</nav>
 
   <main>
     <div class="panel active" id="panel-home">
@@ -450,7 +668,7 @@
           <div class="home-card-body">
             <div class="hc-icon"><i class="fas fa-book-open"></i></div>
             <div>
-              <h3 class="hc-title">Vocabulary</h3>
+              <h3 class="hc-title">Vokabular</h3>
             </div>
           </div>
           <div class="hc-meta"><span id="home-count-vocab">0</span> <i class="fas fa-chevron-right"></i></div>
@@ -460,7 +678,7 @@
           <div class="home-card-body">
             <div class="hc-icon"><i class="fas fa-comments"></i></div>
             <div>
-              <h3 class="hc-title">Sentences</h3>
+              <h3 class="hc-title">Sätze</h3>
             </div>
           </div>
           <div class="hc-meta"><span id="home-count-sentences">0</span> <i class="fas fa-chevron-right"></i></div>
@@ -470,7 +688,7 @@
           <div class="home-card-body">
             <div class="hc-icon"><i class="fas fa-scroll"></i></div>
             <div>
-              <h3 class="hc-title">Grammar Rules</h3>
+              <h3 class="hc-title">Grammatikregeln</h3>
             </div>
           </div>
           <div class="hc-meta"><span id="home-count-grammar">0</span> <i class="fas fa-chevron-right"></i></div>
@@ -480,7 +698,7 @@
           <div class="home-card-body">
             <div class="hc-icon"><i class="fas fa-table-cells"></i></div>
             <div>
-              <h3 class="hc-title">Verbs Conjugation</h3>
+              <h3 class="hc-title">Konjugation</h3>
             </div>
           </div>
           <div class="hc-meta"><span id="home-count-conj">0</span> <i class="fas fa-chevron-right"></i></div>
@@ -489,147 +707,311 @@
     </div>
 
     <div class="panel" id="panel-vocab">
-      <h2 class="section-title"><i class="fas fa-book-open" style="color:var(--accent)"></i> Vocabulary</h2>
+      <h2 class="section-title"><i class="fas fa-book-open" style="color:var(--accent)"></i> Vokabular</h2>
       <div class="stats-bar">
-        <div class="stat-card"><div class="stat-num" id="stat-vocab-total">0</div><div class="stat-label">Total Words</div></div>
+        <div class="stat-card"><div class="stat-num" id="stat-vocab-total">0</div><div class="stat-label">Wörter gesamt</div></div>
       </div>
 
       <div class="toolbar">
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input type="text" id="vocab-search" placeholder="Search vocabulary..." oninput="renderVocab()"/>
+          <input type="text" id="vocab-search" placeholder="Vokabular suchen..." oninput="renderVocab()"/>
         </div>
         <div class="toolbar-row">
           <select class="filter-select" id="filter-type" onchange="renderVocab()">
-            <option value="">Alle types</option>
-            <option value="Selfstandig naamwoord">Selfstandig naamwoord</option>
-            <option value="Werkwoord">Werkwoord</option>
-            <option value="Bijvoeglijk naamwoord">Bijvoeglijk naamwoord</option>
-            <option value="Voornaamwoord">Voornaamwoord</option>
-            <option value="Bijwoord">Bijwoord</option>
+            <option value="">Alle Wortarten</option>
+            <option value="Substantiv">Substantiv (Noun)</option>
+            <option value="Verb">Verb</option>
+            <option value="Adjektiv">Adjektiv (Adjective)</option>
+            <option value="Pronomen">Pronomen (Pronoun)</option>
+            <option value="Adverb">Adverb</option>
           </select>
         </div>
-        <button class="btn-add" onclick="openVocabModal()"><i class="fas fa-plus"></i> Add New Word</button>
+        <button class="btn-add" onclick="openVocabModal()"><i class="fas fa-plus"></i> Neues Wort</button>
+        <button class="btn-secondary" onclick="openSubPanel('tags','vocab')"><i class="fas fa-tags"></i> Nach Tags suchen</button>
+        <button class="btn-secondary" style="background:#FFF7ED; color:#C2410C; border-color:rgba(194,65,12,0.20);" onclick="openPracticePanel()"><i class="fas fa-dumbbell"></i> Üben</button>
       </div>
       <div class="vocab-list" id="vocab-mobile-container"></div>
     </div>
 
-    <div class="panel" id="panel-sentences">
-      <h2 class="section-title"><i class="fas fa-comments" style="color:var(--blue)"></i> Sentences</h2>
+    
+<div class="panel" id="panel-tags">
+ <h2 class="section-title"><i class="fas fa-tags" style="color:var(--accent)"></i> Vokabular-Tags</h2>
+ <div class="stats-bar">
+  <div class="stat-card"><div class="stat-num" id="stat-tags-total">0</div><div class="stat-label">Tags gesamt</div></div>
+ </div>
+ <div class="toolbar">
+  <div class="search-box">
+   <i class="fas fa-search"></i>
+   <input type="text" id="tags-search" placeholder="Tags oder Wörter suchen..." oninput="renderTagGroups()"/>
+  </div>
+  <div class="tag-screen-actions">
+   <button class="btn-secondary" onclick="openSubPanel('vocab','vocab')"><i class="fas fa-arrow-left"></i> Zurück zum Vokabular</button>
+  </div>
+ </div>
+ <div class="grammar-grid" id="tag-groups-container"></div>
+</div>
+
+<div class="panel" id="panel-sentences">
+      <h2 class="section-title"><i class="fas fa-comments" style="color:var(--blue)"></i> Sätze</h2>
+ <div class="stats-bar">
+  <div class="stat-card"><div class="stat-num" id="stat-sentences-total">0</div><div class="stat-label">Sätze gesamt</div></div>
+ </div>
+
       <div class="toolbar">
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input type="text" id="sentences-search" placeholder="Search sentence expressions..." oninput="renderSentences()"/>
+          <input type="text" id="sentences-search" placeholder="Sätze suchen..." oninput="renderSentences()"/>
         </div>
-        <button class="btn-add" onclick="openSentenceModal()"><i class="fas fa-plus"></i> Add Sentence</button>
+        <button class="btn-add" onclick="openSentenceModal()"><i class="fas fa-plus"></i> Satz hinzufügen</button>
       </div>
       <div class="vocab-list" id="sentences-mobile-container"></div>
     </div>
 
     <div class="panel" id="panel-grammar">
       <h2 class="section-title"><i class="fas fa-scroll" style="color:var(--orange)"></i> Syntax & Rules</h2>
+ <div class="stats-bar">
+  <div class="stat-card"><div class="stat-num" id="stat-grammar-total">0</div><div class="stat-label">Regeln gesamt</div></div>
+ </div>
+
       <div class="toolbar">
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input type="text" id="grammar-search" placeholder="Search structures..." oninput="renderGrammar()"/>
+          <input type="text" id="grammar-search" placeholder="Strukturen suchen..." oninput="renderGrammar()"/>
         </div>
-        <button class="btn-add" onclick="openGrammarModal()"><i class="fas fa-plus"></i> Add Rule Directive</button>
+        <button class="btn-add" onclick="openGrammarModal()"><i class="fas fa-plus"></i> Regel erstellen</button>
       </div>
       <div class="grammar-grid" id="grammar-grid"></div>
     </div>
 
     <div class="panel" id="panel-conjugation">
-      <h2 class="section-title"><i class="fas fa-table-cells" style="color:var(--green)"></i> Verbs Conjugation</h2>
+      <h2 class="section-title"><i class="fas fa-table-cells" style="color:var(--green)"></i> Verbkonjugation</h2>
+ <div class="stats-bar">
+  <div class="stat-card"><div class="stat-num" id="stat-conj-total">0</div><div class="stat-label">Verben gesamt</div></div>
+ </div>
+
       <div class="toolbar">
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input type="text" id="conj-search" placeholder="Search verbs..." oninput="renderConjugations()"/>
+          <input type="text" id="conj-search" placeholder="Verben suchen..." oninput="renderConjugations()"/>
         </div>
-        <button class="btn-add" onclick="openConjModal()"><i class="fas fa-plus"></i> Add Verb Conjugation</button>
+        <button class="btn-add" onclick="openConjModal()"><i class="fas fa-plus"></i> Konjugation hinzufügen</button>
       </div>
       <div class="conjugation-grid" id="conj-grid"></div>
     </div>
-  </main>
+  
+ <!-- Practice Setup Panel -->
+<div class="panel" id="panel-practice">
+  <div class="practice-play-head">
+    <button class="btn-secondary practice-back" type="button" onclick="openSubPanel('vocab','vocab')"><i class="fas fa-arrow-left"></i> Zurück zum Vokabular</button>
+  </div>
+
+  <div class="practice-setup-header">
+    <h3><i class="fas fa-dumbbell"></i> Übungsmodus wählen</h3>
+    <p>Wähle einen Modus und tippe auf Start.</p>
+  </div>
+
+  <div id="practice-empty-warning" class="practice-empty-warning">
+    <i class="fas fa-triangle-exclamation"></i> Noch kein Inhalt zum Üben.
+    <a onclick="openSubPanel('vocab','vocab')">Vokabular hinzufügen</a> oder
+    <a onclick="switchTab('sentences')">Sätze hinzufügen</a> zuerst.
+  </div>
+
+  <div class="practice-modes" id="practice-modes">
+    <button class="mode-tile active" data-mode="listen_word_dutch" type="button" onclick="setPracticeMode('listen_word_dutch')">
+      <div class="mode-tile-icon"><i class="fas fa-volume-high"></i></div>
+      <div class="mt-title">Hören → Deutsch</div>
+      <div class="mt-sub">Wort</div>
+    </button>
+    <button class="mode-tile" data-mode="listen_sentence_dutch" type="button" onclick="setPracticeMode('listen_sentence_dutch')">
+      <div class="mode-tile-icon"><i class="fas fa-headphones"></i></div>
+      <div class="mt-title">Hören → Deutsch</div>
+      <div class="mt-sub">Satz</div>
+    </button>
+    <button class="mode-tile" data-mode="see_translation_word_dutch" type="button" onclick="setPracticeMode('see_translation_word_dutch')">
+      <div class="mode-tile-icon"><i class="fas fa-language"></i></div>
+      <div class="mt-title">Übersetzen → Deutsch</div>
+      <div class="mt-sub">Wort</div>
+    </button>
+    <button class="mode-tile" data-mode="see_translation_sentence_dutch" type="button" onclick="setPracticeMode('see_translation_sentence_dutch')">
+      <div class="mode-tile-icon"><i class="fas fa-file-lines"></i></div>
+      <div class="mt-title">Übersetzen → Deutsch</div>
+      <div class="mt-sub">Satz</div>
+    </button>
+    <button class="mode-tile" data-mode="see_dutch_word_english" type="button" onclick="setPracticeMode('see_dutch_word_english')">
+      <div class="mode-tile-icon"><i class="fas fa-book"></i></div>
+      <div class="mt-title">Deutsch → Englisch</div>
+      <div class="mt-sub">Wort</div>
+    </button>
+    <button class="mode-tile" data-mode="see_dutch_sentence_english" type="button" onclick="setPracticeMode('see_dutch_sentence_english')">
+      <div class="mode-tile-icon"><i class="fas fa-comments"></i></div>
+      <div class="mt-title">Deutsch → Englisch</div>
+      <div class="mt-sub">Satz</div>
+    </button>
+    <button class="mode-tile" data-mode="conj_english_full" type="button" onclick="setPracticeMode('conj_english_full')">
+      <div class="mode-tile-icon"><i class="fas fa-table-list"></i></div>
+      <div class="mt-title">Englisch → Konjugation</div>
+      <div class="mt-sub">Alle Formen</div>
+    </button>
+    <button class="mode-tile" data-mode="conj_pronoun_dutch" type="button" onclick="setPracticeMode('conj_pronoun_dutch')">
+      <div class="mode-tile-icon"><i class="fas fa-person-rays"></i></div>
+      <div class="mt-title">Konjugation → Deutsch</div>
+      <div class="mt-sub">Einzelform</div>
+    </button>
+  </div>
+
+  <button class="btn-add" type="button" onclick="practiceGoToPlay()" style="width:100%; margin-top:4px;"><i class="fas fa-play"></i> Übung starten</button>
+</div>
+
+<!-- Practice Play Panel -->
+<div class="panel" id="panel-practice-play">
+  <div class="practice-play-head">
+    <button class="btn-secondary practice-back" type="button" onclick="practiceBackToSetup()"><i class="fas fa-arrow-left"></i> Modi</button>
+    <span id="practice-play-mode-label" style="font-size:12px; font-weight:700; color:var(--text2); margin-left:4px;"></span>
+  </div>
+
+  <!-- Live stats bar — hidden until first answer -->
+  <div class="practice-live-bar" id="practice-live-bar">
+    <div class="plb-left">
+      <span class="plb-badge plb-score" id="practice-score">0/0</span>
+      <span class="plb-badge plb-streak" id="practice-streak">🔥 0</span>
+    </div>
+    <div class="plb-right">
+      <span class="plb-streak-label">Serien-Fortschritt</span>
+      <div class="plb-progress"><div class="plb-progress-fill" id="practice-progress-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Prompt card -->
+  <div class="practice-prompt-card" id="practice-prompt-card">
+    <div class="ppc-head">
+      <div class="ppc-icon" id="practice-icon"><i class="fas fa-bolt"></i></div>
+      <div>
+        <div class="ppc-label" id="practice-label">Get ready</div>
+        <div class="ppc-main" id="practice-main">Starting…</div>
+      </div>
+    </div>
+    <div class="ppc-sub" id="practice-sub" style="display:none;"></div>
+  </div>
+
+  <!-- Feedback banner -->
+  <div id="practice-feedback" class="practice-feedback"></div>
+
+  <!-- Answer area -->
+  <div class="practice-answer-wrap">
+    <textarea id="practice-answer" placeholder="Antwort eingeben…"></textarea>
+  </div>
+
+  <!-- Sticky action bar -->
+  <div class="practice-stickybar" id="practice-stickybar">
+    <div class="practice-sticky-inner">
+      <div class="practice-actions-secondary">
+        <button class="btn-ghost" type="button" onclick="practicePlay()"><i class="fas fa-volume-high"></i> Anhören</button>
+        <button class="btn-ghost" type="button" onclick="practiceReveal()"><i class="fas fa-eye"></i> Aufdecken</button>
+      </div>
+      <div class="practice-actions-primary">
+        <button class="btn-check" type="button" onclick="practiceCheck()"><i class="fas fa-check"></i> Prüfen</button>
+        <button class="btn-next" type="button" onclick="practiceStartOrNext()"><i class="fas fa-forward"></i> Weiter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
 </div>
 
 <div class="modal-overlay hidden" id="vocab-modal">
   <div class="modal">
-    <h2 class="modal-title" id="vocab-modal-title">Add New Word</h2>
+    <h2 class="modal-title" id="vocab-modal-title">Neues Wort hinzufügen</h2>
     <input type="hidden" id="vocab-row-index"/>
     <input type="hidden" id="vocab-id"/>
     
-    <div class="field"><label>Dutch Vocab *</label><input type="text" id="v-dutch" placeholder="e.g. Vrouw"/></div>
-    <div class="field"><label>English Meaning *</label><input type="text" id="v-english" placeholder="e.g. woman"/></div>
-    <div class="field"><label>Arabic Meaning</label><input type="text" id="v-arabic" placeholder="e.g. امرأة"/></div>
+    <div class="field"><label>Deutsches Wort *</label><input type="text" id="v-dutch" placeholder="e.g. die Frau"/></div>
+    <div class="field"><label>Englische Bedeutung *</label><input type="text" id="v-english" placeholder="e.g. woman"/></div>
+    <div class="field"><label>Arabische Bedeutung</label><input type="text" id="v-arabic" placeholder="e.g. Ø§ÙØ±Ø£Ø©"/></div>
     
     <div class="field">
-      <label>Word Type *</label>
+      <label>Wortart *</label>
       <select id="v-type">
-        <option value="Selfstandig naamwoord">Selfstandig naamwoord (Noun)</option>
-        <option value="Werkwoord">Werkwoord (Verb)</option>
-        <option value="Bijvoeglijk naamwoord">Bijvoeglijk naamwoord (Adjective)</option>
-        <option value="Voornaamwoord">Voornaamwoord (Pronoun)</option>
-        <option value="Bijwoord">Bijwoord (Adverb)</option>
+        <option value="Substantiv">Substantiv (Noun)</option>
+        <option value="Verb">Verb</option>
+        <option value="Adjektiv">Adjektiv (Adjective)</option>
+        <option value="Pronomen">Pronomen (Pronoun)</option>
+        <option value="Adverb">Adverb</option>
       </select>
     </div>
     
     <div class="field">
-      <label>Definite Article</label>
+      <label>Bestimmter Artikel</label>
       <select id="v-article">
-        <option value="">Niet van toepassing / Geen</option>
-        <option value="de">de</option>
-        <option value="het">het</option>
+        <option value="">Kein Artikel</option>
+        <option value="der">der (maskulin)</option>
+        <option value="die">die (feminin / Plural)</option>
+        <option value="das">das (neutral)</option>
       </select>
     </div>
     
-    <div class="field"><label>Plural</label><input type="text" id="v-plural" placeholder="e.g. Vrouwen"/></div>
+    <div class="field"><label>Plural</label><input type="text" id="v-plural" placeholder="e.g. die Frauen"/></div>
     
     <div class="field">
       <label>Tags</label>
       <div class="input-with-btn">
-        <input type="text" id="v-tag-input" placeholder="Type a tag and click add..."/>
-        <button type="button" class="btn-field" onclick="addInteractiveTag()">Add</button>
+        <input type="text" id="v-tag-input" list="vocab-tag-datalist" placeholder="Tag eingeben..." oninput="filterTagSuggestions(this.value, 'vocab')" onkeydown="handleTagInputKey(event, 'vocab')"/>
+ <datalist id="vocab-tag-datalist"></datalist>
+        <button type="button" class="btn-field" onclick="addInteractiveTag()">Hinzufügen</button>
       </div>
       <div class="interactive-tags-container" id="v-tags-container"></div>
     </div>
     
     <div class="field">
-      <label>Parent Word</label>
-      <input type="text" id="v-parent-word" placeholder="Type a parent Dutch word..."/>
+      <label>Übergeordnetes Wort</label>
+      <input type="text" id="v-parent-word" placeholder="Übergeordnetes Wort eingeben..."/>
     </div>
     
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('vocab-modal')">Cancel</button>
-      <button class="btn-save" id="vocab-save-btn" onclick="saveVocab()">Save Word</button>
+      <button class="btn-cancel" onclick="closeModal('vocab-modal')">Abbrechen</button>
+      <button class="btn-save" id="vocab-save-btn" onclick="saveVocab()">Wort speichern</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay hidden" id="sentence-modal">
   <div class="modal">
-    <h2 class="modal-title" id="sentence-modal-title">Add Sentence</h2>
+    <h2 class="modal-title" id="sentence-modal-title">Satz hinzufügen</h2>
     <input type="hidden" id="sentence-row-index"/>
-    <div class="field"><label>Dutch Sentence Expression *</label><textarea id="s-dutch" placeholder="e.g. De vrouw drinkt sap."></textarea></div>
-    <div class="field"><label>English Translation *</label><textarea id="s-english" placeholder="e.g. The woman drinks juice."></textarea></div>
+    <div class="field"><label>Deutscher Satz *</label><textarea id="s-dutch" placeholder="e.g. Die Frau trinkt Saft."></textarea></div>
+    <div class="field"><label>Englische Übersetzung *</label><textarea id="s-english" placeholder="e.g. The woman drinks juice."></textarea></div>
+    
+    <div class="field">
+      <label>Grammatik-Tags</label>
+      <div class="input-with-btn">
+        <input type="text" id="s-tag-input" list="rule-tag-datalist" placeholder="Regelname eingeben..." oninput="filterTagSuggestions(this.value, 'rule')" onkeydown="handleTagInputKey(event, 'rule')"/>
+ <datalist id="rule-tag-datalist"></datalist>
+        <button type="button" class="btn-field" onclick="addSentenceInteractiveTag()">Hinzufügen</button>
+      </div>
+      <div class="interactive-tags-container" id="s-tags-container"></div>
+      
+    </div>
+    
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('sentence-modal')">Cancel</button>
-      <button class="btn-save" onclick="saveSentence()">Save Sentence</button>
+      <button class="btn-cancel" onclick="closeModal('sentence-modal')">Abbrechen</button>
+      <button class="btn-save" id="sentence-save-btn" onclick="saveSentence()">Satz speichern</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay hidden" id="grammar-modal">
   <div class="modal" style="max-width: 700px;">
-    <h2 class="modal-title" id="grammar-modal-title">Grammar Directive Blueprint</h2>
+    <h2 class="modal-title" id="grammar-modal-title">Regel erstellen</h2>
     <input type="hidden" id="grammar-row-index"/>
     
     <div class="field">
-      <label>Topic / Rule Name *</label>
+      <label>Thema / Regelname *</label>
       <input type="text" id="g-topic" placeholder="e.g. Inversion or Word Order"/>
     </div>
     
     <div class="field">
-      <label>Rule Structural Logic (HTML Rich Content)</label>
+      <label>Regelinhalt (HTML)</label>
       
       <div class="editor-btn-grp">
         <button type="button" class="btn-sm btn-edit" title="Bold" onclick="execEditorCommand('bold')"><i class="fas fa-bold"></i></button>
@@ -672,68 +1054,68 @@
         <div style="width: 1px; background: var(--border-dark); margin: 0 2px;"></div>
 
         <button type="button" class="btn-sm btn-del" title="Reset Formatting Layouts" onclick="execEditorCommand('removeFormat')"><i class="fas fa-text-slash"></i></button>
-        <button type="button" id="btn-editor-toggle-mode" class="btn-sm" style="background: #EBF8FF; color: var(--blue); font-weight: 600;" title="Toggle View HTML Code Source Map" onclick="toggleEditorSourceMode()"><i class="fas fa-code"></i> HTML Code Mode</button>
+        <button type="button" id="btn-editor-toggle-mode" class="btn-sm" style="background: #EBF8FF; color: var(--blue); font-weight: 600;" title="Toggle View HTML Code Source Map" onclick="toggleEditorSourceMode()"><i class="fas fa-code"></i> HTML-Code-Modus</button>
       </div>
       
       <div id="g-html-editor" contenteditable="true" style="width: 100%; min-height: 220px; max-height: 350px; overflow-y: auto; padding: 0.7rem; border: 1.5px solid var(--border-dark); border-radius: 0 0 10px 10px; background: var(--surface); color: var(--text); outline: none; line-height: 1.6;"></div>
       
-      <textarea id="g-html-editor-raw" class="editor-textarea-html" placeholder="Raw context HTML node logs go here..."></textarea>
+      <textarea id="g-html-editor-raw" class="editor-textarea-html" placeholder="HTML-Code hier eingeben..."></textarea>
     </div>
     
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('grammar-modal')">Cancel</button>
-      <button class="btn-save" onclick="saveGrammar()">Save Rich Directive</button>
+      <button class="btn-cancel" onclick="closeModal('grammar-modal')">Abbrechen</button>
+      <button class="btn-save" onclick="saveGrammar()">Regel speichern</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay hidden" id="conj-modal">
   <div class="modal">
-    <h2 class="modal-title" id="conj-modal-title">Add Verb Conjugation</h2>
+    <h2 class="modal-title" id="conj-modal-title">Konjugation hinzufügen</h2>
     <input type="hidden" id="conj-row-index"/>
     
     <div class="field">
-      <label>Grammatical Tense *</label>
+      <label>Grammatikalische Zeit *</label>
       <select id="c-tense" onchange="populateAvailableVerbsDropdown()">
-        <option value="Tegenwoordige tijd">Tegenwoordige tijd (Present)</option>
-        <option value="Verleden tijd">Verleden tijd (Past)</option>
-        <option value="Voltooid deelwoord">Voltooid deelwoord (Perfect)</option>
+        <option value="Präsens">Präsens (Present)</option>
+        <option value="Präteritum">Präteritum (Simple Past)</option>
+        <option value="Perfekt">Perfekt (Perfect)</option>
       </select>
     </div>
 
     <div class="field">
-      <label>Select Unconjugated Verb *</label>
+      <label>Verb auswählen *</label>
       <select id="c-verb">
       </select>
     </div>
     
     <div class="field">
-      <label>Conjugation Stems</label>
+      <label>Konjugationsformen</label>
       <div class="conj-builder">
-        <div class="conj-row"><span class="conj-label">Ik</span><input class="conj-input" id="c-ik" placeholder="heb"/></div>
-        <div class="conj-row"><span class="conj-label">Je</span><input class="conj-input" id="c-jij" placeholder="hebt"/></div>
-        <div class="conj-row"><span class="conj-label">Hij/Ze/Het</span><input class="conj-input" id="c-heeft" placeholder="heeft"/></div>
-        <div class="conj-row"><span class="conj-label">We/Jullie/Ze</span><input class="conj-input" id="c-wij" placeholder="hebben"/></div>
+        <div class="conj-row"><span class="conj-label">ich</span><input class="conj-input" id="c-ik" placeholder="habe"/></div>
+        <div class="conj-row"><span class="conj-label">du</span><input class="conj-input" id="c-jij" placeholder="hast"/></div>
+        <div class="conj-row"><span class="conj-label">er/sie/es</span><input class="conj-input" id="c-heeft" placeholder="hat"/></div>
+        <div class="conj-row"><span class="conj-label">wir/ihr/sie/Sie</span><input class="conj-input" id="c-wij" placeholder="haben"/></div>
       </div>
     </div>
     
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('conj-modal')">Cancel</button>
-      <button class="btn-save" onclick="saveConjugation()">Save Verb Conjugation</button>
+      <button class="btn-cancel" onclick="closeModal('conj-modal')">Abbrechen</button>
+      <button class="btn-save" onclick="saveConjugation()">Konjugation speichern</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay hidden" id="sentence-lookup-modal">
   <div class="modal" style="border-top: 3px solid var(--blue);">
-    <h2 class="modal-title" style="color: var(--blue)"><i class="fas fa-search"></i> Connected Sentences</h2>
+    <h2 class="modal-title" style="color: var(--blue)"><i class="fas fa-search"></i> Verbundene Sätze</h2>
     <div style="font-size: 13px; text-align: center; margin-top: -1rem; margin-bottom: 1rem; color: var(--text2);">
-      Matches for contextual token: <b id="lookup-target-token" style="color: var(--text)">—</b>
+      Treffer für: <b id="lookup-target-token" style="color: var(--text)">â</b>
     </div>
     <div id="popup-matched-sentences-container" style="max-height: 40vh; overflow-y: auto; background: var(--bg); border-radius: 10px; border: 1px solid var(--border);">
     </div>
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('sentence-lookup-modal')">Dismiss Window</button>
+      <button class="btn-cancel" onclick="closeModal('sentence-lookup-modal')">Schließen</button>
     </div>
   </div>
 </div>
@@ -744,24 +1126,32 @@
     <div style="font-size:14px; text-align:center; color:var(--text2); margin-top:-1rem; margin-bottom:1rem;" id="cd-translation"></div>
     <div style="margin-bottom:1rem;"><table class="conj-table" id="cd-table"><tbody></tbody></table></div>
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('conj-detail-modal')">Close</button>
-      <button class="btn-save" id="cd-edit-btn">Modify</button>
+      <button class="btn-cancel" onclick="closeModal('conj-detail-modal')">Schließen</button>
+      <button class="btn-save" id="cd-edit-btn">Bearbeiten</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay hidden" id="settings-modal">
   <div class="modal">
-    <h2 class="modal-title">⚙️ Structural Settings</h2>
-    <div class="field"><label>Google Sheet Web App Endpoint</label><input type="text" id="s-web-app-url" readonly style="background:var(--surface2); color:var(--text2); cursor:not-allowed; font-family:'DM Mono', monospace; font-size:11px;"/></div>
+    <h2 class="modal-title">âï¸ Structural Settings</h2>
+    <div class="field"><label>Google Sheet Web App URL</label><input type="text" id="s-web-app-url" readonly style="background:var(--surface2); color:var(--text2); cursor:not-allowed; font-family:'DM Mono', monospace; font-size:11px;"/></div>
     <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal('settings-modal')">Cancel</button>
-      <button class="btn-save" onclick="closeModal('settings-modal')">Dismiss Config</button>
+      <button class="btn-cancel" onclick="closeModal('settings-modal')">Abbrechen</button>
+      <button class="btn-save" onclick="closeModal('settings-modal')">Schließen</button>
     </div>
   </div>
 </div>
 
 <script>
+window.addEventListener('error', (e)=>{
+ const msg = document.getElementById('load-msg');
+ if(msg && msg.textContent === 'Alles wird vorbereitet...'){
+ msg.textContent = 'â ï¸ App-Fehler beim Start. Bitte neu laden.';
+ }
+ console.error(e.error || e.message || e);
+});
+
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz7j8kKGyqzoNrJKtRaixNhIBwnqAunuqc5oAPHWG7XZoLolc4yHZr4MFoiRC7XD0a2eQ/exec';
 
 const VOCAB_SHEET = 'Vocabulary';
@@ -769,27 +1159,175 @@ const SENTENCES_SHEET = 'sentences';
 const GRAMMAR_SHEET = 'Grammar';
 const CONJ_SHEET = 'Conjugation';
 
-let STATE = { ttsLang: 'nl-NL', vocab: [], sentences: [], grammar: [], conjugations: [], rawConjugationRows: [] };
+let STATE = { ttsLang: 'de-DE', vocab: [], sentences: [], grammar: [], conjugations: [], rawConjugationRows: [] };
 let CURRENT_MODAL_TAGS = [];
+let CURRENT_SENTENCE_TAGS = []; 
 let IS_EDITOR_RAW_HTML_MODE = false;
 
+// ---- Tags & Suggestions (clean) ----
+let TAG_BANK = [];
+let RULE_TAG_BANK = [];
+
+function splitTags(raw){
+ const s = String(raw || '').trim();
+ if(!s) return [];
+ const parts = s.includes('//;//') ? s.split('//;//') : s.split('//://');
+ return parts.map(x => String(x).trim()).filter(Boolean);
+}
+function uniqueSorted(arr){
+ return Array.from(new Set(arr)).sort((a,b) => a.localeCompare(b));
+}
+function renderDatalist(id, items){
+ const el = document.getElementById(id);
+ if(!el) return;
+ el.innerHTML = items.map(t => `<option value="${esc(t)}"></option>`).join('');
+}
+function updateTagBanks(){
+ const all = [];
+ STATE.vocab.forEach(v => splitTags(v.tags).forEach(t => all.push(t)));
+ TAG_BANK = uniqueSorted(all);
+ renderDatalist('vocab-tag-datalist', TAG_BANK);
+ const stat = document.getElementById('stat-tags-total');
+ if(stat) stat.textContent = TAG_BANK.length;
+ // if tags screen active, re-render
+ if (typeof renderTagGroups === 'function') renderTagGroups();
+}
+function updateRuleTagBank(){
+ const all = STATE.grammar.map(g => String(g.topic || '').trim()).filter(Boolean);
+ RULE_TAG_BANK = uniqueSorted(all);
+ renderDatalist('rule-tag-datalist', RULE_TAG_BANK);
+}
+function filterTagSuggestions(query, kind){
+ const q = String(query || '').toLowerCase().trim();
+ const bank = (kind === 'rule') ? RULE_TAG_BANK : TAG_BANK;
+ const id = (kind === 'rule') ? 'rule-tag-datalist' : 'vocab-tag-datalist';
+ if(!q){
+ renderDatalist(id, bank);
+ return;
+ }
+ const filtered = bank.filter(t => t.toLowerCase().includes(q)).slice(0, 25);
+ renderDatalist(id, filtered);
+}
+function handleTagInputKey(event, kind){
+ if(event.key === 'Enter'){
+ event.preventDefault();
+ if(kind === 'rule') addSentenceInteractiveTag();
+ else addInteractiveTag();
+ }
+}
+
+function buildTagIndex(){
+ const index = {};
+ STATE.vocab.forEach(v => {
+  const tags = splitTags(v.tags);
+  // Skip untagged vocab in Tags screen
+  if(!tags.length) return;
+  tags.forEach(t => {
+   if(!index[t]) index[t] = [];
+   index[t].push(v);
+  });
+ });
+ return index;
+}
+
+function renderTagGroups(){
+ const panel = document.getElementById('panel-tags');
+ if(!panel || !panel.classList.contains('active')) return;
+ const q = String((document.getElementById('tags-search') || {}).value || '').toLowerCase().trim();
+ const container = document.getElementById('tag-groups-container');
+ if(!container) return;
+ const index = buildTagIndex();
+ const tags = Object.keys(index).sort((a,b) => {
+  const ca = (index[a] || []).length;
+  const cb = (index[b] || []).length;
+  if (cb !== ca) return cb - ca;
+  return a.localeCompare(b);
+});
+ const matchesWord = (v) => {
+ const a = String(v.dutch || '').toLowerCase();
+ const b = String(v.translation || '').toLowerCase();
+ const c = String(v.arabic || '').toLowerCase();
+ return a.includes(q) || b.includes(q) || c.includes(q);
+ };
+ const visibleTags = !q ? tags : tags.filter(t => t.toLowerCase().includes(q) || (index[t] || []).some(matchesWord));
+ if(!visibleTags.length){
+ container.innerHTML = `<div class="empty-state"><i class="fas fa-tags"></i>Keine Tags oder Wörter gefunden.</div>`;
+ return;
+ }
+ container.innerHTML = visibleTags.map(tag => {
+ const items = index[tag] || [];
+ const shown = q ? items.filter(matchesWord) : items;
+ const itemsHtml = shown.map(v => {
+ const arab = v.arabic ? ` <span style="color:var(--accent); direction:rtl;">${esc(v.arabic)}</span>` : '';
+ const art = String(v.article || '').trim().toLowerCase();
+ return `
+ <div class="tag-item">
+  <div class="tag-item-main">
+   <div class="tag-item-dutch">${esc(v.dutch)}</div>
+   <div class="tag-item-trans">${esc(v.translation)}${arab}</div>
+  </div>
+  <div class="tag-item-actions">
+   <button class="btn-mini" title="Listen" onclick="speakVocab('${esc(art)}','${esc(v.dutch)}')"><i class="fas fa-volume-high"></i></button>
+   <button class="btn-mini" title="Edit" onclick="editVocab(${v.rowIndex})"><i class="fas fa-pen"></i></button>
+  </div>
+ </div>`;
+ }).join('');
+ return `
+ <details class="tag-group">
+  <summary>
+   <div class="tag-group-title"><span class="tag-pill"><i class="fas fa-tag"></i> ${esc(tag)}</span></div>
+   <span class="tag-count">${items.length}</span>
+  </summary>
+  <div class="tag-items">${itemsHtml || '<div class="empty-state" style="padding:0.75rem;">Keine Wörter in diesem Tag.</div>'}</div>
+ </details>`;
+ }).join('');
+}
+
+function openSubPanel(panelId, activeTabId){
+ document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+ document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+ const panel = document.getElementById('panel-' + panelId);
+ if(panel) panel.classList.add('active');
+ const tab = document.getElementById('tab-' + activeTabId);
+ if(tab) tab.classList.add('active');
+ window.scrollTo(0,0);
+ if(panelId === 'tags') renderTagGroups();
+}
+
+
 async function launchApp() {
-  document.getElementById('loading-screen').style.display = 'none';
-  document.getElementById('app').style.display = 'block';
-  await syncAll();
+  const loadMsg = document.getElementById('load-msg');
+  try {
+    loadMsg.textContent = 'Verbindung zu deinen Daten...';
+    await syncVocab();
+    loadMsg.textContent = 'Lädt Sätze & Regeln...';
+    await Promise.all([syncSentences(), syncGrammar(), syncConjugations()]);
+    updateHomeMetrics();
+    document.getElementById('loading-screen').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+  } catch(e) {
+    loadMsg.textContent = 'â ï¸ Daten konnten nicht geladen werden. Verbindung prüfen.';
+    // Still show the app after a delay so user isn't stuck
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+      setStatus('Connection issue â tap sync to retry.', true);
+    }, 2000);
+  }
 }
 
 async function syncAll() {
-  setStatus('Refreshing synchronized layouts...', true);
+  setStatus('Daten werden synchronisiert...', true);
   try {
+    // vocab must complete first â conjugations need it for verb name resolution
     await syncVocab();
     await Promise.all([syncSentences(), syncGrammar(), syncConjugations()]);
     setStatus('', false);
-    toast('Data pipelines aligned ✓', 'success');
+    toast('All set! Your data is up to date. â', 'success');
     updateHomeMetrics();
   } catch(e) {
-    setStatus('Connection alignment issue: ' + e.message, true);
-    toast('Sheet structures returned an exception state.', 'error');
+    setStatus('Connection issue â tap "Erneut versuchen" to retry.', true);
+    toast('Could not sync right now. Please try again.', 'error');
   }
 }
 
@@ -808,13 +1346,14 @@ async function syncVocab() {
     dutch: r[1] || '',
     translation: r[2] || '',
     arabic: r[3] || '',
-    type: r[4] || 'Selfstandig naamwoord',
+    type: r[4] || 'Substantiv',
     tags: r[5] || '',
     article: r[6] || '',
     plural: r[7] || '',
     parentLink: r[8] || ''
   }));
   renderVocab();
+ updateTagBanks();
 }
 
 async function syncSentences() {
@@ -822,7 +1361,8 @@ async function syncSentences() {
   STATE.sentences = rows.slice(1).filter(r => r[0]).map((r, i) => ({
     rowIndex: i + 2,
     sentence: r[0] || '',
-    translation: r[1] || ''
+    translation: r[1] || '',  // Column B -> Translation
+    tags: r[2] || ''         // Column C -> Tags
   }));
   renderSentences();
 }
@@ -830,7 +1370,7 @@ async function syncSentences() {
 /* Supercharged Rich HTML Core Logic Editor Extensions */
 function execEditorCommand(cmd, value = null) {
   if(IS_EDITOR_RAW_HTML_MODE) {
-    toast('Exit HTML Code Mode to run formatting toolkits.', 'error');
+    toast('Bitte zuerst den HTML-Modus verlassen.', 'error');
     return;
   }
   document.execCommand(cmd, false, value);
@@ -846,7 +1386,7 @@ function toggleEditorSourceMode() {
     rawArea.value = visualArea.innerHTML;
     visualArea.style.display = 'none';
     rawArea.style.display = 'block';
-    toggleBtn.innerHTML = `<i class="fas fa-eye"></i> Visual Workspace`;
+    toggleBtn.innerHTML = `<i class="fas fa-eye"></i> Visuelle Ansicht`;
     toggleBtn.style.background = '#E6F4ED';
     toggleBtn.style.color = 'var(--green)';
     IS_EDITOR_RAW_HTML_MODE = true;
@@ -854,7 +1394,7 @@ function toggleEditorSourceMode() {
     visualArea.innerHTML = rawArea.value;
     rawArea.style.display = 'none';
     visualArea.style.display = 'block';
-    toggleBtn.innerHTML = `<i class="fas fa-code"></i> HTML Code Mode`;
+    toggleBtn.innerHTML = `<i class="fas fa-code"></i> HTML-Code-Modus`;
     toggleBtn.style.background = '#EBF8FF';
     toggleBtn.style.color = 'var(--blue)';
     IS_EDITOR_RAW_HTML_MODE = false;
@@ -863,19 +1403,19 @@ function toggleEditorSourceMode() {
 
 function insertEditorTable() {
   if (IS_EDITOR_RAW_HTML_MODE) return;
-  const rows = prompt("Enter number of matrix table rows:", "3");
-  const cols = prompt("Enter number of column components:", "2");
+  const rows = prompt("Anzahl der Tabellenzeilen:", "3");
+  const cols = prompt("Anzahl der Spalten:", "2");
   if (!rows || !cols) return;
 
   let tableHtml = `<table style="width:100%; border-collapse:collapse; margin:12px 0;"><thead><tr>`;
   for (let j = 0; j < parseInt(cols); j++) {
-    tableHtml += `<th style="padding:8px; border:1px solid var(--border-dark); font-size:13px; background:var(--surface2);">Header ${j+1}</th>`;
+    tableHtml += `<th style="padding:8px; border:1px solid var(--border-dark); font-size:13px; background:var(--surface2);">Spalte ${j+1}</th>`;
   }
   tableHtml += `</tr></thead><tbody>`;
   for (let i = 0; i < parseInt(rows); i++) {
     tableHtml += `<tr>`;
     for (let j = 0; j < parseInt(cols); j++) {
-      tableHtml += `<td style="padding:8px; border:1px solid var(--border-dark); font-size:13px;">Data Context</td>`;
+      tableHtml += `<td style="padding:8px; border:1px solid var(--border-dark); font-size:13px;">Inhalt</td>`;
     }
     tableHtml += `</tr>`;
   }
@@ -964,6 +1504,7 @@ async function syncGrammar() {
     html: r[1] || ''
   }));
   renderGrammar();
+ updateRuleTagBank();
 }
 
 async function syncConjugations() {
@@ -974,7 +1515,7 @@ async function syncConjugations() {
     rowIndex: i + 2,
     verbId: String(r[0]).trim(),
     pronoun: String(r[1]).trim().toLowerCase(),
-    tense: r[2] || 'Tegenwoordige tijd',
+    tense: r[2] || 'Präsens',
     value: r[3] || ''
   }));
 
@@ -982,7 +1523,7 @@ async function syncConjugations() {
   rawConjugations.forEach(r => {
     const verbId = String(r[0]).trim();
     const pronoun = String(r[1]).trim().toLowerCase();
-    const tense = r[2] || 'Tegenwoordige tijd';
+    const tense = r[2] || 'Präsens';
     const conjValue = r[3] || '';
     const compositeKey = `${verbId}_${tense}`;
     
@@ -993,14 +1534,14 @@ async function syncConjugations() {
         verb: `ID ${verbId}`, 
         translation: 'Verb Paradigm',
         notes: `Tense: ${tense}`,
-        ik: '—', jij: '—', hij: '—', wij: '—', jullie: '—', zij: '—'
+        ik: 'â', jij: 'â', hij: 'â', wij: 'â', jullie: 'â', zij: 'â'
       };
     }
     
-    if (pronoun === 'ik') grouped[compositeKey].ik = conjValue;
-    else if (pronoun === 'je' || pronoun === 'jij') grouped[compositeKey].jij = conjValue;
-    else if (pronoun === 'hij/ze/het' || pronoun === 'hij/zij/het') grouped[compositeKey].hij = conjValue;
-    else if (pronoun.includes('we') || pronoun.includes('jullie') || pronoun.includes('ze')) {
+    if (pronoun === 'ich') grouped[compositeKey].ik = conjValue;
+    else if (pronoun === 'du') grouped[compositeKey].jij = conjValue;
+    else if (pronoun === 'er/sie/es') grouped[compositeKey].hij = conjValue;
+    else if (pronoun.includes('wir') || pronoun.includes('ihr') || pronoun.includes('sie')) {
       grouped[compositeKey].wij = conjValue;
       grouped[compositeKey].jullie = conjValue;
       grouped[compositeKey].zij = conjValue;
@@ -1022,7 +1563,7 @@ async function syncConjugations() {
 async function sheetRead(sheetName) {
   const url = `${WEB_APP_URL}?action=read&sheet=${encodeURIComponent(sheetName)}`;
   const res = await fetch(url);
-  if (!res.ok) throw new Error('API target validation error.');
+  if (!res.ok) throw new Error('Service is not reachable right now.');
   const data = await res.json();
   return data.values || [];
 }
@@ -1044,11 +1585,11 @@ async function sheetDeleteRow(sheetName, rowIndex) {
 
 function getWordTypeClass(type) {
   switch(type) {
-    case 'Selfstandig naamwoord': return 'type-noun';
-    case 'Werkwoord': return 'type-verb';
-    case 'Bijvoeglijk naamwoord': return 'type-adj';
-    case 'Voornaamwoord': return 'type-pronoun';
-    case 'Bijwoord': return 'type-adverb';
+    case 'Substantiv': return 'type-noun';
+    case 'Verb': return 'type-verb';
+    case 'Adjektiv': return 'type-adj';
+    case 'Pronomen': return 'type-pronoun';
+    case 'Adverb': return 'type-adverb';
     default: return '';
   }
 }
@@ -1067,15 +1608,16 @@ function renderVocab() {
 
   const container = document.getElementById('vocab-mobile-container');
   if (filtered.length === 0) {
-    container.innerHTML = `<div class="empty-state"><i class="fas fa-layer-group"></i>No tracking entries match parameters.</div>`;
+    container.innerHTML = `<div class="empty-state"><i class="fas fa-layer-group"></i>Keine Einträge gefunden.</div>`;
     return;
   }
 
   container.innerHTML = filtered.map(v => {
     let cleanArticle = String(v.article || '').trim().toLowerCase();
     let displayArticle = '';
-    if (cleanArticle === 'de') displayArticle = 'de';
-    if (cleanArticle === 'het') displayArticle = 'het';
+    if (cleanArticle === 'der') displayArticle = 'der';
+    if (cleanArticle === 'die') displayArticle = 'die';
+    if (cleanArticle === 'das') displayArticle = 'das';
 
     let rawTags = esc(v.tags);
     let tagArray = [];
@@ -1099,7 +1641,7 @@ function renderVocab() {
           </span>
           <span class="vmc-trans">${esc(v.translation)} ${v.arabic ? `| <span style="color:var(--accent); direction:rtl;">${esc(v.arabic)}</span>` : ''}</span>
           ${v.plural ? `<span class="plural-line">Plural: <b>${esc(v.plural)}</b></span>` : ''}
-          ${v.parentLink ? `<span class="parent-link"><i class="fas fa-link"></i> Parent Word: ${esc(displayParent)}</span>` : ''}
+          ${v.parentLink ? `<span class="parent-link"><i class="fas fa-link"></i> Übergeordnet: ${esc(displayParent)}</span>` : ''}
         </div>
       </div>
       <div class="vmc-tags">
@@ -1117,35 +1659,59 @@ function renderVocab() {
 }
 
 function renderSentences() {
-  const search = document.getElementById('sentences-search').value.toLowerCase();
-  const filtered = STATE.sentences.filter(s => !search || s.sentence.toLowerCase().includes(search) || s.translation.toLowerCase().includes(search));
+ const totalEl = document.getElementById('stat-sentences-total');
+ if (totalEl) totalEl.textContent = STATE.sentences.length;
+  const query = document.getElementById('sentences-search').value.toLowerCase().trim();
+  const filtered = STATE.sentences.filter(s => {
+    return String(s.sentence || '').toLowerCase().includes(query) ||
+           String(s.translation || '').toLowerCase().includes(query) ||
+           String(s.tags || '').toLowerCase().includes(query);
+  });
 
+  // TARGET REAL LAYOUT CONTAINER
   const container = document.getElementById('sentences-mobile-container');
+  if (!container) return;
+
   if (filtered.length === 0) {
-    container.innerHTML = `<div class="empty-state"><i class="fas fa-comments"></i>No sentences parsed.</div>`;
+    container.innerHTML = `<div class="empty-state"><i class="fas fa-comment-slash"></i>Keine Sätze gefunden.</div>`;
     return;
   }
 
-  container.innerHTML = filtered.map(s => `
-    <div class="vocab-mobile-card" style="border-left:4px solid var(--blue)">
-      <div class="vmc-title-box">
-        <span class="psi-dutch">${esc(s.sentence)}</span>
-        <span class="psi-english">${esc(s.translation)}</span>
+  container.innerHTML = filtered.map(s => {
+    let tagHtml = '';
+    if (s.tags) {
+      const parts = s.tags.includes('//;//') ? s.tags.split('//;//') : s.tags.split('//://');
+      tagHtml = parts.map(t => t.trim()).filter(t => t).map(t => `<span class="tag" style="background:var(--blue-light); color:var(--blue);">${esc(t)}</span>`).join(' ');
+    }
+
+    return `
+      <div class="vocab-mobile-card">
+        <div class="vmc-top">
+          <div class="vmc-title-box">
+            <div class="vmc-dutch" style="font-family:'Instrument Sans', sans-serif; font-size:15px;">${esc(s.sentence || '')}</div>
+            <div class="vmc-trans" style="margin-top:4px; font-size:13.5px;">${esc(s.translation || '')}</div>
+          </div>
+        </div>
+        
+        ${tagHtml ? `<div class="vmc-tags" style="margin-top:6px;">${tagHtml}</div>` : ''}
+        
+        <div class="vmc-actions" style="margin-top:8px;">
+          <button class="btn-sm btn-speak" onclick="speak('${jsEsc(s.sentence || '')}')"><i class="fas fa-volume-high"></i> Anhören</button>
+          <button class="btn-sm btn-edit" onclick="editSentence(${s.rowIndex})"><i class="fas fa-pen"></i> Edit</button>
+          <button class="btn-sm btn-del" onclick="deleteItem('${SENTENCES_SHEET}', ${s.rowIndex})"><i class="fas fa-trash"></i></button>
+        </div>
       </div>
-      <div class="vmc-actions">
-        <button class="btn-sm btn-speak" onclick="speak('${esc(s.sentence)}')"><i class="fas fa-volume-high"></i> Play</button>
-        <button class="btn-sm btn-edit" onclick="editSentence(${s.rowIndex})"><i class="fas fa-pen"></i></button>
-        <button class="btn-sm btn-del" onclick="deleteSentence(${s.rowIndex})"><i class="fas fa-trash"></i></button>
-      </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 function lookupSentences(word) {
   document.getElementById('lookup-target-token').textContent = word;
   const normalizedWord = word.toLowerCase().trim();
   
-  const matches = STATE.sentences.filter(s => s.sentence.toLowerCase().includes(normalizedWord));
+  const matches = STATE.sentences.filter(s =>
+  String(s.sentence || '').toLowerCase().includes(normalizedWord)
+);
   const container = document.getElementById('popup-matched-sentences-container');
   
   if (matches.length === 0) {
@@ -1157,69 +1723,246 @@ function lookupSentences(word) {
           <div class="psi-dutch">${esc(s.sentence)}</div>
           <div class="psi-english">${esc(s.translation)}</div>
         </div>
-        <button class="btn-popup-speak" onclick="speak('${esc(s.sentence)}')" title="Listen Sentence"><i class="fas fa-volume-high"></i></button>
+        <button class="btn-popup-speak" onclick="speak('${jsEsc(s.sentence)}')" title="Listen Sentence"><i class="fas fa-volume-high"></i></button>
       </div>
     `).join('');
   }
   openModal('sentence-lookup-modal');
 }
 
+function lookupConjugationSentences(conj) {
+
+  const searchTerms = [
+    conj.ik,
+    conj.jij,
+    conj.hij,
+    conj.jullie
+  ]
+  .filter(v => v && v !== 'â')
+  .map(v => v.toLowerCase().trim());
+
+  const matches = STATE.sentences.filter(s => {
+    const sentence = String(s.sentence || '').toLowerCase();
+
+    return searchTerms.some(term =>
+      sentence.includes(term)
+    );
+  });
+
+  document.getElementById('lookup-target-token').textContent =
+    searchTerms.join(', ');
+
+  const container = document.getElementById('popup-matched-sentences-container');
+
+  if (matches.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state" style="padding:1rem;">
+        <i class="fas fa-comment-slash"></i>
+        Keine passenden Sätze gefunden.
+      </div>
+    `;
+  } else {
+
+    container.innerHTML = matches.map(s => `
+      <div class="popup-sentence-item">
+        <div class="psi-content">
+          <div class="psi-dutch">${esc(s.sentence)}</div>
+          <div class="psi-english">${esc(s.translation)}</div>
+        </div>
+
+        <button class="btn-popup-speak"
+          onclick="speak('${jsEsc(s.sentence)}')">
+
+          <i class="fas fa-volume-high"></i>
+        </button>
+      </div>
+    `).join('');
+  }
+
+  openModal('sentence-lookup-modal');
+}
+
 function renderGrammar() {
-  const search = document.getElementById('grammar-search').value.toLowerCase();
-  const filtered = STATE.grammar.filter(g => !search || g.topic.toLowerCase().includes(search) || g.html.toLowerCase().includes(search));
-  
-  const grid = document.getElementById('grammar-grid');
+ const totalEl = document.getElementById('stat-grammar-total');
+ if (totalEl) totalEl.textContent = STATE.grammar.length;
+  const query = document.getElementById('grammar-search').value.toLowerCase().trim();
+
+  const filtered = STATE.grammar.filter(g => {
+    return String(g.topic || '').toLowerCase().includes(query) ||
+           String(g.html || '').toLowerCase().includes(query);
+  });
+
+  const container = document.getElementById('grammar-grid');
+  if (!container) return;
+
   if (filtered.length === 0) {
-    grid.innerHTML = `<div class="empty-state"><i class="fas fa-scroll"></i>No structured guidelines mapped.</div>`;
+    container.innerHTML = `<div class="empty-state"><i class="fas fa-scroll"></i>Keine Regeln gefunden.</div>`;
     return;
   }
-  grid.innerHTML = filtered.map(g => `
-    <div class="grammar-card" style="border-top: 3px solid var(--orange);">
-      <div class="gc-header" style="margin-bottom: 0.85rem;">
-        <span class="gc-topic" style="font-size:1.25rem;">${esc(g.topic)}</span>
-        <span class="gc-type" style="background:var(--orange-light);color:var(--orange)">Rich HTML Matrix</span>
-      </div>
-      <div class="gc-notes style-rendered-html-content">${g.html}</div>
-      <div class="gc-footer">
-        <span class="gc-date">Database Row Index Tracking: #${g.rowIndex}</span>
-        <div class="gc-actions">
-          <button class="btn-sm btn-edit" onclick="editGrammar(${g.rowIndex})"><i class="fas fa-pen"></i> Edit Structure</button>
-          <button class="btn-sm btn-del" onclick="deleteGrammar(${g.rowIndex})"><i class="fas fa-trash"></i></button>
+
+  container.innerHTML = filtered.map(g => {
+    const ruleLabelName = String(g.topic || '').trim();
+    
+    // Look through sentences for any matching rules listed in their tags
+    const matchedSentencesExamples = STATE.sentences.filter(s => {
+      if (!s.tags) return false;
+      const parsedSentenceTags = s.tags.includes('//;//') ? s.tags.split('//;//') : s.tags.split('//://');
+      return parsedSentenceTags.map(t => t.trim().toLowerCase()).includes(ruleLabelName.toLowerCase());
+    });
+
+    let embeddedExamplesHtml = '';
+    if (matchedSentencesExamples.length > 0) {
+      embeddedExamplesHtml = `
+        <div style="margin-top: 1rem; padding-top: 0.85rem; border-top: 1px dashed var(--surface2);">
+          <span style="font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.03em; display: block; margin-bottom: 0.5rem;">
+            <i class="fas fa-lightbulb"></i> Beispiele (${matchedSentencesExamples.length})
+          </span>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            ${matchedSentencesExamples.map(ex => `
+              <div style="background:var(--bg); border-left:2.5px solid var(--accent); padding:6px 10px; border-radius:4px; display:flex; justify-content:space-between; align-items:center; gap:8px;">
+                <div style="flex:1;">
+                  <div style="font-weight:600; font-size:13.5px; color:var(--text);">${esc(ex.sentence || '')}</div>
+                  <div style="color:var(--text2); font-size:12.5px; font-style:italic; margin-top:1px;">${esc(ex.translation || '')}</div>
+                </div>
+                <button class="btn-popup-speak" onclick="speak('${jsEsc(ex.sentence || '')}')" style="width:26px; height:26px; min-width:26px; font-size:10px; border:none; background:var(--surface2); border-radius:50%; cursor:pointer;"><i class="fas fa-volume-high"></i></button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="grammar-card">
+        <div class="gc-header">
+          <div class="gc-topic">${esc(g.topic)}</div>
+          
+        </div>
+        <div class="gc-notes style-rendered-html-content">${g.html || ''}</div>
+        
+        ${embeddedExamplesHtml}
+
+        <div class="gc-footer">
+          
+          <div class="gc-actions">
+            <button class="btn-sm btn-edit" onclick="editGrammar(${g.rowIndex})"><i class="fas fa-pen"></i> Bearbeiten</button>
+            <button class="btn-sm btn-del" onclick="deleteItem('${GRAMMAR_SHEET}', ${g.rowIndex})"><i class="fas fa-trash"></i></button>
+          </div>
         </div>
       </div>
-    </div>`).join('');
+    `;
+  }).join('');
 }
 
 function renderConjugations() {
-  const search = document.getElementById('conj-search').value.toLowerCase();
-  const filtered = STATE.conjugations.filter(c => !search || c.verb.toLowerCase().includes(search) || c.translation.toLowerCase().includes(search));
-  
-  const grid = document.getElementById('conj-grid');
+ const totalEl = document.getElementById('stat-conj-total');
+ if (totalEl) totalEl.textContent = STATE.conjugations.length;
+  const query = document.getElementById('conj-search').value.toLowerCase().trim();
+
+  const filtered = STATE.conjugations.filter(c => {
+    return (
+      String(c.verb || '').toLowerCase().includes(query) ||
+      String(c.translation || '').toLowerCase().includes(query) ||
+      String(c.tense || '').toLowerCase().includes(query)
+    );
+  });
+
+  const container = document.getElementById('conj-grid');
+
   if (filtered.length === 0) {
-    grid.innerHTML = `<div class="empty-state"><i class="fas fa-table-cells"></i>No verb models mapped.</div>`;
+    container.innerHTML = `
+      <div class="empty-state">
+        <i class="fas fa-table-cells"></i>
+        Keine Konjugationsstrukturen gefunden.
+      </div>
+    `;
     return;
   }
-  
-  grid.className = "conjugation-grid";
-  
-  grid.innerHTML = filtered.map(c => `
-    <div class="grammar-card" onclick="showConjDetail('${esc(c.id)}','${esc(c.tense)}')" style="border-left: 4px solid var(--green); cursor:pointer; display:flex; flex-direction:column; justify-content:space-between;">
-      <div>
-        <div class="gc-header">
-          <span class="gc-topic">${esc(c.verb)}</span>
-          <span class="gc-type" style="background:var(--green-light);color:var(--green); font-size:9px;">${esc(c.translation)}</span>
+
+  container.innerHTML = filtered.map(c => `
+    <div class="grammar-card">
+
+      <div class="gc-header">
+        <div>
+          <div class="gc-topic" style="color:var(--green);">
+            ${esc(c.verb)}
+          </div>
+
+          <div style="
+            font-size:13px;
+            color:var(--text2);
+            margin-top:2px;
+          ">
+            ${esc(c.translation || '')}
+          </div>
         </div>
-        
-        <div class="conj-vertical-list">
-          <div class="conj-vertical-item"><span class="conj-v-pronoun">Ik</span><span class="conj-v-word">${esc(c.ik || '—')}</span></div>
-          <div class="conj-vertical-item"><span class="conj-v-pronoun">Je</span><span class="conj-v-word">${esc(c.jij || '—')}</span></div>
-          <div class="conj-vertical-item"><span class="conj-v-pronoun">Hij/Ze/Het</span><span class="conj-v-word">${esc(c.hij || '—')}</span></div>
-          <div class="conj-vertical-item"><span class="conj-v-pronoun">We/Jullie/Ze</span><span class="conj-v-word">${esc(c.wij || '—')}</span></div>
-        </div>
+
+        <span class="gc-type"
+          style="background:var(--green-light); color:var(--green);">
+          ${esc(c.tense)}
+        </span>
       </div>
-      
-      <div style="font-size:12px; color:var(--text2); border-top:1px solid var(--border-dark); padding-top:6px; margin-top:4px; font-weight: 600; color:var(--green);">${esc(c.tense)}</div>
-    </div>`).join('');
+
+      <div class="conj-vertical-list">
+
+        <div class="conj-vertical-item">
+          <span class="conj-v-pronoun">ich</span>
+          <span class="conj-v-word">${esc(c.ik || 'â')}</span>
+        </div>
+
+        <div class="conj-vertical-item">
+          <span class="conj-v-pronoun">du</span>
+          <span class="conj-v-word">${esc(c.jij || 'â')}</span>
+        </div>
+
+        <div class="conj-vertical-item">
+          <span class="conj-v-pronoun">er / sie / es</span>
+          <span class="conj-v-word">${esc(c.hij || 'â')}</span>
+        </div>
+
+        <div class="conj-vertical-item">
+          <span class="conj-v-pronoun">wir / ihr / sie</span>
+          <span class="conj-v-word">${esc(c.jullie || 'â')}</span>
+        </div>
+
+      </div>
+
+      <div class="gc-footer">
+
+        <div class="gc-actions">
+
+          <button class="btn-sm btn-speak"
+            onclick='speakConjugationSet(${JSON.stringify(c)})'>
+
+            <i class="fas fa-volume-high"></i>
+            Listen
+          </button>
+
+          <button class="btn-sm btn-search-sentences"
+            onclick='lookupConjugationSentences(${JSON.stringify(c)})'>
+
+            <i class="fas fa-comments"></i>
+            Examples
+          </button>
+
+          <button class="btn-sm btn-edit"
+            onclick="editConjugation('${jsEsc(c.id)}', '${jsEsc(c.tense)}')">
+
+            <i class="fas fa-pen"></i>
+          </button>
+
+          <button class="btn-sm btn-del"
+            onclick="deleteConjugation('${jsEsc(c.id)}', '${jsEsc(c.tense)}')">
+
+            <i class="fas fa-trash"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  `).join('');
 }
 
 function showConjDetail(verbId, tense) {
@@ -1230,10 +1973,10 @@ function showConjDetail(verbId, tense) {
   
   const tbody = document.getElementById('cd-table').querySelector('tbody');
   tbody.innerHTML = `
-    <tr><td>Ik (I)</td><td>${esc(c.ik) || '—'}</td></tr>
-    <tr><td>Je (you)</td><td>${esc(c.jij) || '—'}</td></tr>
-    <tr><td>Hij/Ze/Het (he/she/it)</td><td>${esc(c.hij) || '—'}</td></tr>
-    <tr><td>We/Jullie/Ze (plural)</td><td>${esc(c.wij) || '—'}</td></tr>
+    <tr><td>ich (I)</td><td>${esc(c.ik) || 'â'}</td></tr>
+    <tr><td>du (you)</td><td>${esc(c.jij) || 'â'}</td></tr>
+    <tr><td>er/sie/es (he/she/it)</td><td>${esc(c.hij) || 'â'}</td></tr>
+    <tr><td>wir/ihr/sie (plural)</td><td>${esc(c.jullie) || 'â'}</td></tr>
   `;
   
   document.getElementById('cd-edit-btn').onclick = () => { 
@@ -1244,8 +1987,8 @@ function showConjDetail(verbId, tense) {
 }
 
 function openVocabModal(data = null) {
-  document.getElementById('vocab-modal-title').textContent = data ? 'Modify Word' : 'Add New Word';
-  document.getElementById('vocab-save-btn').textContent = data ? 'Modify Word' : 'Save Word';
+  document.getElementById('vocab-modal-title').textContent = data ? 'Wort bearbeiten' : 'Neues Wort hinzufügen';
+  document.getElementById('vocab-save-btn').textContent = data ? 'Wort bearbeiten' : 'Wort speichern';
   document.getElementById('vocab-row-index').value = data ? data.rowIndex : '';
   
   if (!data) {
@@ -1258,7 +2001,7 @@ function openVocabModal(data = null) {
   document.getElementById('v-dutch').value = data ? data.dutch : '';
   document.getElementById('v-english').value = data ? data.translation : '';
   document.getElementById('v-arabic').value = data ? data.arabic : '';
-  document.getElementById('v-type').value = data ? data.type : 'Selfstandig naamwoord';
+  document.getElementById('v-type').value = data ? data.type : 'Substantiv';
   
   let cleanArticle = data ? String(data.article).trim().toLowerCase() : '';
   document.getElementById('v-article').value = (cleanArticle === 'de' || cleanArticle === 'het') ? cleanArticle : '';
@@ -1313,10 +2056,37 @@ function renderModalTags() {
   `).join('');
 }
 
+function renderSentenceModalTags() {
+  const container = document.getElementById('s-tags-container');
+  container.innerHTML = CURRENT_SENTENCE_TAGS.map((t, idx) => `
+    <span class="interactive-tag" style="background:var(--blue-light); color:var(--blue);">
+      ${esc(t)} <i class="fas fa-times-circle" onclick="removeSentenceInteractiveTag(${idx})" style="color:var(--text2);"></i>
+    </span>
+  `).join('');
+}
+
+function addSentenceInteractiveTag() {
+  const input = document.getElementById('s-tag-input');
+  const tagVal = input.value.trim();
+  if (!tagVal) return;
+  if (CURRENT_SENTENCE_TAGS.includes(tagVal)) {
+    toast('Rule tag entry already allocated.', 'error');
+    return;
+  }
+  CURRENT_SENTENCE_TAGS.push(tagVal);
+  input.value = '';
+  renderSentenceModalTags();
+}
+
+function removeSentenceInteractiveTag(idx) {
+  CURRENT_SENTENCE_TAGS.splice(idx, 1);
+  renderSentenceModalTags();
+}
+
 async function saveVocab() {
   const dutch = document.getElementById('v-dutch').value.trim();
   const english = document.getElementById('v-english').value.trim();
-  if (!dutch || !english) { toast('Required parameters missing.', 'error'); return; }
+  if (!dutch || !english) { toast('Pflichtfelder dürfen nicht leer sein.', 'error'); return; }
   
   const rIdx = document.getElementById('vocab-row-index').value;
   const id = document.getElementById('vocab-id').value;
@@ -1347,83 +2117,123 @@ async function saveVocab() {
   ];
 
   try {
-    setStatus('Committing lexical record updates...', true);
+    setStatus('Wort wird gespeichert...', true);
     if (rIdx) await sheetUpdate(VOCAB_SHEET, parseInt(rIdx), values);
     else await sheetAppend(VOCAB_SHEET, values);
     closeModal('vocab-modal');
-    toast('Vocab entry updated ✓', 'success');
+    toast('Erfolgreich gespeichert â', 'success');
     await syncVocab(); updateHomeMetrics();
-  } catch(e) { toast('Database commit rejection.', 'error'); }
+  } catch(e) { toast('Speichern fehlgeschlagen. Bitte erneut versuchen.', 'error'); }
   finally { setStatus('', false); }
 }
 
 async function deleteVocab(rowIndex) {
-  if (!confirm('Drop structural element item row?')) return;
+  if (!confirm('Dieses Wort löschen?')) return;
   try {
-    setStatus('Purging record indexes...', true);
+    setStatus('Wird gelöscht...', true);
     await sheetDeleteRow(VOCAB_SHEET, rowIndex);
-    toast('Record eliminated.', 'success');
+    toast('Gelöscht â', 'success');
     await syncVocab(); updateHomeMetrics();
-  } catch(e) { toast('Drop sequence failed.', 'error'); }
+  } catch(e) { toast('Löschen fehlgeschlagen. Bitte erneut versuchen.', 'error'); }
   finally { setStatus('', false); }
 }
 
-function openSentenceModal(data = null) {
-  document.getElementById('sentence-modal-title').textContent = data ? 'Modify Sentence' : 'Add Sentence';
-  document.getElementById('sentence-row-index').value = data ? data.rowIndex : '';
-  document.getElementById('s-dutch').value = data ? data.sentence : '';
-  document.getElementById('s-english').value = data ? data.translation : '';
+function openSentenceModal() {
+  document.getElementById('sentence-row-index').value = '';
+  document.getElementById('s-dutch').value = '';
+  document.getElementById('s-english').value = '';
+  document.getElementById('s-tag-input').value = '';
+  CURRENT_SENTENCE_TAGS = [];
+  renderSentenceModalTags();
+  
+  // Reset modal to Add mode
+  document.getElementById('sentence-modal-title').textContent = 'Satz hinzufügen';
+ document.getElementById('sentence-save-btn').textContent = 'Satz hinzufügen';
+  
   openModal('sentence-modal');
 }
 
 function editSentence(rowIndex) {
-  const s = STATE.sentences.find(x => x.rowIndex === rowIndex);
-  if (s) openSentenceModal(s);
+  const data = STATE.sentences.find(s => s.rowIndex === rowIndex);
+  if (!data) return;
+
+  document.getElementById('sentence-row-index').value = data.rowIndex;
+  document.getElementById('s-dutch').value = data.sentence || ''; // FIXED KEY
+  document.getElementById('s-english').value = data.translation || '';
+  document.getElementById('s-tag-input').value = '';
+
+  CURRENT_SENTENCE_TAGS = [];
+  if (data && data.tags) {
+    let rawStr = data.tags;
+    let parsed = rawStr.includes('//;//') ? rawStr.split('//;//') : rawStr.split('//://');
+    CURRENT_SENTENCE_TAGS = parsed.map(t => t.trim()).filter(t => t.length > 0);
+  }
+  renderSentenceModalTags();
+  
+  // Reset modal to Edit mode
+  document.getElementById('sentence-modal-title').textContent = 'Satz bearbeiten';
+ document.getElementById('sentence-save-btn').textContent = 'Satz bearbeiten';
+  
+  openModal('sentence-modal');
 }
 
 async function saveSentence() {
-  const dutch = document.getElementById('s-dutch').value.trim();
-  const english = document.getElementById('s-english').value.trim();
-  if (!dutch || !english) { toast('Fields cannot be empty.', 'error'); return; }
+  const rowIndex = document.getElementById('sentence-row-index').value;
+  const sentence = document.getElementById('s-dutch').value.trim();
+  const translation = document.getElementById('s-english').value.trim();
+  const tagPayload = CURRENT_SENTENCE_TAGS.join('//;//');
 
-  const rIdx = document.getElementById('sentence-row-index').value;
-  const values = [dutch, english];
+  if (!sentence || !translation) {
+    toast('Pflichtfelder dürfen nicht leer sein.', 'error');
+    return;
+  }
+
+  setStatus('Satz wird gespeichert...', true);
 
   try {
-    setStatus('Committing syntactic models...', true);
-    if (rIdx) await sheetUpdate(SENTENCES_SHEET, parseInt(rIdx), values);
-    else await sheetAppend(SENTENCES_SHEET, values);
+    const values = [sentence, translation, tagPayload];
+
+    if (rowIndex) {
+      await sheetUpdate(SENTENCES_SHEET, parseInt(rowIndex), values);
+      toast('Sentence updated â', 'success');
+    } else {
+      await sheetAppend(SENTENCES_SHEET, values);
+      toast('Sentence saved â', 'success');
+    }
+
     closeModal('sentence-modal');
-    toast('Sentence framework saved ✓', 'success');
-    await syncSentences(); updateHomeMetrics();
-  } catch(e) { toast('Write trace exception.', 'error'); }
-  finally { setStatus('', false); }
-}
 
-async function deleteSentence(rowIndex) {
-  if (!confirm('Purge target sentence context row?')) return;
-  try {
-    setStatus('Dropping row sequence...', true);
-    await sheetDeleteRow(SENTENCES_SHEET, rowIndex);
-    toast('Sentence row removed.', 'success');
-    await syncSentences(); updateHomeMetrics();
-  } catch(e) { toast('Deletion failed.', 'error'); }
-  finally { setStatus('', false); }
+    await syncSentences();
+    updateHomeMetrics();
+
+  } catch (err) {
+    console.error(err);
+    toast('Speichern fehlgeschlagen. Bitte erneut versuchen.', 'error');
+  } finally {
+    setStatus('', false);
+  }
 }
 
 function editVocab(rowIndex) { const e = STATE.vocab.find(v => v.rowIndex === rowIndex); if (e) openVocabModal(e); }
 
 function openGrammarModal(data = null) {
-  document.getElementById('grammar-modal-title').textContent = data ? 'Modify HTML Architecture Directive' : 'Create HTML Rule Matrix';
+  document.getElementById('grammar-modal-title').textContent = data ? 'Regel bearbeiten' : 'Regel erstellen';
   document.getElementById('grammar-row-index').value = data ? data.rowIndex : '';
   document.getElementById('g-topic').value = data ? data.topic : '';
   
-  // Force reset editor mode flags back to Visual Mode upon initialization
-  IS_EDITOR_RAW_HTML_MODE = true; 
-  toggleEditorSourceMode(); 
+  // Clean reset: always open in Visual mode
+  IS_EDITOR_RAW_HTML_MODE = false;
+  const visualArea = document.getElementById('g-html-editor');
+  const rawArea = document.getElementById('g-html-editor-raw');
+  const toggleBtn = document.getElementById('btn-editor-toggle-mode');
+  visualArea.style.display = 'block';
+  rawArea.style.display = 'none';
+  toggleBtn.innerHTML = `<i class="fas fa-code"></i> HTML-Code-Modus`;
+  toggleBtn.style.background = '#EBF8FF';
+  toggleBtn.style.color = 'var(--blue)';
 
-  document.getElementById('g-html-editor').innerHTML = data ? data.html : '<div>Enter contextual structure...</div>';
-  document.getElementById('g-html-editor-raw').value = data ? data.html : '<div>Enter contextual structure...</div>';
+  visualArea.innerHTML = data ? data.html : '<div>Inhalt hier eingeben...</div>';
+  rawArea.value = data ? data.html : '<div>Inhalt hier eingeben...</div>';
   openModal('grammar-modal');
 }
 
@@ -1441,7 +2251,7 @@ async function saveGrammar() {
   }
   
   if (!topic || !htmlContent) { 
-    toast('Topic tracking name and content payload validation failure.', 'error'); 
+    toast('Thema und Inhalt sind Pflichtfelder.', 'error'); 
     return; 
   }
   
@@ -1449,25 +2259,25 @@ async function saveGrammar() {
   const values = [topic, htmlContent];
   
   try {
-    setStatus('Committing formatted HTML content to data matrix grids...', true);
+    setStatus('Regel wird gespeichert...', true);
     if (rIdx) {
       await sheetUpdate(GRAMMAR_SHEET, parseInt(rIdx), values);
     } else {
       await sheetAppend(GRAMMAR_SHEET, values);
     }
     closeModal('grammar-modal');
-    toast('Rich interface directive updated ✓', 'success');
+    toast('Rule saved â', 'success');
     await syncGrammar(); 
     updateHomeMetrics();
   } catch(e) { 
-    toast('Error updating cloud data repository elements.', 'error'); 
+    toast('Regel konnte nicht gespeichert werden.', 'error'); 
   } finally {
     setStatus('', false);
   }
 }
 
 async function deleteGrammar(rowIndex) {
-  if (!confirm('Drop layout rule?')) return;
+  if (!confirm('Diese Regel löschen?')) return;
   await sheetDeleteRow(GRAMMAR_SHEET, rowIndex);
   await syncGrammar(); updateHomeMetrics();
 }
@@ -1477,7 +2287,7 @@ function populateAvailableVerbsDropdown(selectedVerbId = null) {
   const targetTense = tenseSelect.value;
   const verbDropdown = document.getElementById('c-verb');
   
-  const allVerbsInVocab = STATE.vocab.filter(v => v.type === 'Werkwoord');
+  const allVerbsInVocab = STATE.vocab.filter(v => v.type === 'Verb');
   
   const unmappedVerbs = allVerbsInVocab.filter(v => {
     if (selectedVerbId && String(v.id) === String(selectedVerbId)) return true;
@@ -1489,7 +2299,7 @@ function populateAvailableVerbsDropdown(selectedVerbId = null) {
   });
   
   if (unmappedVerbs.length === 0) {
-    verbDropdown.innerHTML = `<option value="">(No unconjugated verbs available for this tense)</option>`;
+    verbDropdown.innerHTML = `<option value="">(Keine Verben für diese Zeit verfügbar)</option>`;
   } else {
     verbDropdown.innerHTML = unmappedVerbs.map(v => 
       `<option value="${v.id}">${esc(v.dutch)} (${esc(v.translation)})</option>`
@@ -1498,30 +2308,40 @@ function populateAvailableVerbsDropdown(selectedVerbId = null) {
 }
 
 function openConjModal(data = null) {
-  document.getElementById('conj-modal-title').textContent = 'Add Verb Conjugation';
-  document.getElementById('conj-row-index').value = data ? data.id : '';
+  const isEdit = !!data;
+  document.getElementById('conj-modal-title').textContent = isEdit ? 'Konjugation bearbeiten' : 'Konjugation hinzufügen';
+  document.getElementById('conj-row-index').value = isEdit ? (data.id || '') : '';
   
   const tenseDropdown = document.getElementById('c-tense');
-  tenseDropdown.value = data ? (data.tense || 'Tegenwoordige tijd') : 'Tegenwoordige tijd';
+  tenseDropdown.value = isEdit ? (data.tense || 'Präsens') : 'Präsens';
   
-  populateAvailableVerbsDropdown(data ? data.id : null);
-  
-  if (data) {
-    document.getElementById('c-verb').value = data.id;
+  if (isEdit) {
+    // In edit mode: show ALL verbs (not just unconjugated) so the current verb is selectable
+    const allVerbs = STATE.vocab.filter(v => v.type === 'Verb');
+    const verbDropdown = document.getElementById('c-verb');
+    verbDropdown.innerHTML = allVerbs.map(v =>
+      `<option value="${v.id}">${esc(v.dutch)} (${esc(v.translation)})</option>`
+    ).join('');
+    verbDropdown.value = data.id;
+    verbDropdown.disabled = true; // lock verb during edit
+  } else {
+    document.getElementById('c-verb').disabled = false;
+    populateAvailableVerbsDropdown();
   }
   
-  document.getElementById('c-ik').value = data ? data.ik : '';
-  document.getElementById('c-jij').value = data ? data.jij : '';
-  document.getElementById('c-heeft').value = data ? data.hij : '';
-  document.getElementById('c-wij').value = data ? data.wij : '';
+  document.getElementById('c-ik').value = isEdit ? (data.ik !== 'â' ? data.ik : '') : '';
+  document.getElementById('c-jij').value = isEdit ? (data.jij !== 'â' ? data.jij : '') : '';
+  document.getElementById('c-heeft').value = isEdit ? (data.hij !== 'â' ? data.hij : '') : '';
+  document.getElementById('c-wij').value = isEdit ? (data.jullie !== 'â' ? data.jullie : '') : '';
   openModal('conj-modal');
 }
 
 async function saveConjugation() {
   const verbIdStr = document.getElementById('c-verb').value;
   const targetTense = document.getElementById('c-tense').value;
+  const editingId = document.getElementById('conj-row-index').value;
   
-  if (!verbIdStr) { toast('An active unconjugated verb selection is required.', 'error'); return; }
+  if (!verbIdStr) { toast('Bitte ein Verb auswählen.', 'error'); return; }
   
   const ikVal = document.getElementById('c-ik').value.trim();
   const jijVal = document.getElementById('c-jij').value.trim();
@@ -1529,18 +2349,32 @@ async function saveConjugation() {
   const wijVal = document.getElementById('c-wij').value.trim();
   
   try {
-    setStatus('Updating relational database rows...', true);
+    setStatus('Konjugation wird gespeichert...', true);
     
-    await sheetAppend(CONJ_SHEET, [verbIdStr, 'Ik', targetTense, ikVal]);
-    await sheetAppend(CONJ_SHEET, [verbIdStr, 'Je', targetTense, jijVal]);
-    await sheetAppend(CONJ_SHEET, [verbIdStr, 'Hij/Ze/Het', targetTense, hijVal]);
-    await sheetAppend(CONJ_SHEET, [verbIdStr, 'We/Jullie/Ze', targetTense, wijVal]);
+    const isEditing = !!editingId;
+    
+    if (isEditing) {
+      // Update existing rows for this verbId + tense combo
+      const pronounMap = { 'ich': ikVal, 'du': jijVal, 'er/sie/es': hijVal, 'wir/ihr/sie': wijVal };
+      const existingRows = STATE.rawConjugationRows.filter(
+        r => String(r.verbId) === String(verbIdStr) && String(r.tense) === String(targetTense)
+      );
+      for (const row of existingRows) {
+        const newVal = pronounMap[row.pronoun] ?? row.value;
+        await sheetUpdate(CONJ_SHEET, row.rowIndex, [verbIdStr, row.pronoun, targetTense, newVal]);
+      }
+    } else {
+      await sheetAppend(CONJ_SHEET, [verbIdStr, 'ich', targetTense, ikVal]);
+      await sheetAppend(CONJ_SHEET, [verbIdStr, 'du', targetTense, jijVal]);
+      await sheetAppend(CONJ_SHEET, [verbIdStr, 'er/sie/es', targetTense, hijVal]);
+      await sheetAppend(CONJ_SHEET, [verbIdStr, 'wir/ihr/sie', targetTense, wijVal]);
+    }
     
     closeModal('conj-modal');
-    toast('Relational rows submitted ✓', 'success');
+    toast(isEditing ? 'Conjugation updated â' : 'Conjugation saved â', 'success');
     await syncConjugations(); updateHomeMetrics();
   } catch(e) { 
-    toast('Error parsing template submission', 'error'); 
+    toast('Speichern fehlgeschlagen.', 'error'); 
   } finally {
     setStatus('', false);
   }
@@ -1562,14 +2396,44 @@ function speak(text) {
   window.speechSynthesis.speak(u);
 }
 
+function speakConjugationSet(conj) {
+  const lines = [];
+
+  if (conj.ik && conj.ik !== 'â') {
+    lines.push(`ich ${conj.ik}`);
+  }
+
+  if (conj.jij && conj.jij !== 'â') {
+    lines.push(`du ${conj.jij}`);
+  }
+
+  if (conj.hij && conj.hij !== 'â') {
+    lines.push(`er ${conj.hij}`);
+  }
+
+  if (conj.jullie && conj.jullie !== 'â') {
+    lines.push(`wir ${conj.jullie}`);
+  }
+
+  const utterance = new SpeechSynthesisUtterance(lines.join('. '));
+  utterance.lang = 'de-DE';
+  utterance.rate = 0.9;
+
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utterance);
+}
+
 function showSettings() { openModal('settings-modal'); }
 function switchTab(tabId) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('panel-' + tabId).classList.add('active');
-  const t = document.getElementById('tab-' + tabId); if (t) t.classList.add('active');
-  window.scrollTo(0,0);
+ document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+ document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+ const panel = document.getElementById('panel-' + tabId);
+ if(panel) panel.classList.add('active');
+ const t = document.getElementById('tab-' + tabId); if (t) t.classList.add('active');
+ window.scrollTo(0,0);
 }
+
+
 function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
 function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 document.querySelectorAll('.modal-overlay').forEach(ov => {
@@ -1586,7 +2450,501 @@ function toast(msg, type = 'success') {
   t.innerHTML = `<i class=\"fas fa-${type === 'success' ? 'check' : 'exclamation-triangle'}\"></i> ${msg}`;
   document.body.appendChild(t); setTimeout(() => t.remove(), 2400);
 }
-function esc(s) { return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function esc(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function jsEsc(s) {
+  return String(s || '')
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/\"/g, '\\\"')
+    .replace(/\n/g, '\\n')
+    .replace(/\r/g, '');
+}
+async function deleteItem(sheetName, rowIndex) {
+  const label = sheetName === SENTENCES_SHEET ? 'sentence' : 'rule';
+  if (!confirm(`Eintrag löschen?` ||`Delete this ${label}?`)) return;
+  try {
+    setStatus('Wird gelöscht...', true);
+    await sheetDeleteRow(sheetName, rowIndex);
+    toast('Gelöscht â', 'success');
+    if (sheetName === SENTENCES_SHEET) { await syncSentences(); }
+    else if (sheetName === GRAMMAR_SHEET) { await syncGrammar(); }
+    updateHomeMetrics();
+  } catch(e) { toast('Löschen fehlgeschlagen. Bitte erneut versuchen.', 'error'); }
+  finally { setStatus('', false); }
+}
+
+function editConjugation(verbId, tense) {
+  const c = STATE.conjugations.find(x => String(x.id) === String(verbId) && String(x.tense) === String(tense));
+  if (c) openConjModal(c);
+}
+
+async function deleteConjugation(verbId, tense) {
+  if (!confirm('Diese Konjugation löschen?')) return;
+  try {
+    setStatus('Wird gelöscht...', true);
+    const rowsToDelete = STATE.rawConjugationRows
+      .filter(r => String(r.verbId) === String(verbId) && String(r.tense) === String(tense))
+      .map(r => r.rowIndex)
+      .sort((a, b) => b - a); // delete from bottom up to preserve row indices
+    for (const rowIndex of rowsToDelete) {
+      await sheetDeleteRow(CONJ_SHEET, rowIndex);
+    }
+    toast('Konjugation gelöscht â', 'success');
+    await syncConjugations(); updateHomeMetrics();
+  } catch(e) { toast('Löschen fehlgeschlagen. Bitte erneut versuchen.', 'error'); }
+  finally { setStatus('', false); }
+}
+
+
+// ---- Practice Engine ----
+
+// ---- Practice Engine ----
+let PRACTICE = {
+  mode: 'listen_word_dutch',
+  started: false,
+  current: null,
+  expected: '',
+  total: 0,
+  correct: 0,
+  streak: 0,
+  bound: false,
+  checked: false
+};
+
+function pEsc(s){
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+function getDutchWithArticle(v){
+  const art = String(v.article||'').trim().toLowerCase();
+  if(art==='der'||art==='die'||art==='das') return art+' '+v.dutch;
+  return v.dutch;
+}
+
+function openPracticePanel(){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  const panel = document.getElementById('panel-practice');
+  if(panel) panel.classList.add('active');
+  const tab = document.getElementById('tab-vocab');
+  if(tab) tab.classList.add('active');
+  window.scrollTo(0,0);
+  initPracticeSetup();
+}
+
+function initPracticeSetup(){
+  highlightPracticeMode();
+  checkPracticeEmptyState();
+}
+
+function checkPracticeEmptyState(){
+  const warn = document.getElementById('practice-empty-warning');
+  if(!warn) return;
+  const isEmpty = getVocabPool().length===0 && getSentencePool().length===0 && (STATE.conjugations||[]).length===0;
+  warn.style.display = isEmpty ? 'block' : 'none';
+}
+
+function initPracticePlay(){
+  highlightPracticeMode();
+  applyAnswerBoxMode();
+  updatePlayModeLabel();
+  if(!PRACTICE.bound){
+    const ta = document.getElementById('practice-answer');
+    if(ta){
+      ta.addEventListener('keydown', function(e){
+        if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); practiceCheck(); }
+      });
+    }
+    PRACTICE.bound = true;
+  }
+  const ta2 = document.getElementById('practice-answer');
+  if(ta2) ta2.focus();
+}
+
+function updatePlayModeLabel(){
+  const el = document.getElementById('practice-play-mode-label');
+  if(!el) return;
+  const labels = {
+    listen_word_dutch:'Listen → Deutsch (Word)',
+    listen_sentence_dutch:'Listen → Deutsch (Sentence)',
+    see_translation_word_dutch:'Translate → Deutsch (Word)',
+    see_translation_sentence_dutch:'Translate → Deutsch (Sentence)',
+    see_dutch_word_english:'Deutsch → English (Word)',
+    see_dutch_sentence_english:'Deutsch → English (Sentence)',
+    conj_english_full:'English → Full Conjugation',
+    conj_pronoun_dutch:'Conjugation → Dutch'
+  };
+  el.textContent = labels[PRACTICE.mode]||'';
+}
+
+function practiceGoToPlay(){
+  const hasVocab = getVocabPool().length>0;
+  const hasSentences = getSentencePool().length>0;
+  const hasConj = (STATE.conjugations||[]).length>0;
+  const mode = PRACTICE.mode;
+  const needsConj = mode==='conj_english_full'||mode==='conj_pronoun_dutch';
+  const needsSentence = mode==='listen_sentence_dutch'||mode==='see_translation_sentence_dutch'||mode==='see_dutch_sentence_english';
+  if(needsConj&&!hasConj){ toast('Noch keine Konjugationen vorhanden.','error'); return; }
+  if(needsSentence&&!hasSentences){ toast('Noch keine Sätze vorhanden.','error'); return; }
+  if(!needsConj&&!needsSentence&&!hasVocab){ toast('Noch kein Vokabular vorhanden.','error'); return; }
+
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  const play = document.getElementById('panel-practice-play');
+  if(play) play.classList.add('active');
+  const tab = document.getElementById('tab-vocab');
+  if(tab) tab.classList.add('active');
+  window.scrollTo(0,0);
+
+  PRACTICE.started=false; PRACTICE.total=0; PRACTICE.correct=0;
+  PRACTICE.streak=0; PRACTICE.current=null; PRACTICE.expected=''; PRACTICE.checked=false;
+
+  const bar = document.getElementById('practice-live-bar');
+  if(bar) bar.classList.remove('visible');
+
+  clearPracticeFeedback();
+  initPracticePlay();
+  practiceStartOrNext();
+}
+
+function practiceBackToSetup(){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  const setup = document.getElementById('panel-practice');
+  if(setup) setup.classList.add('active');
+  const tab = document.getElementById('tab-vocab');
+  if(tab) tab.classList.add('active');
+  window.scrollTo(0,0);
+  initPracticeSetup();
+}
+
+function highlightPracticeMode(){
+  const wrap = document.getElementById('practice-modes');
+  if(!wrap) return;
+  wrap.querySelectorAll('.mode-tile').forEach(btn=>{
+    btn.classList.toggle('active', btn.getAttribute('data-mode')===PRACTICE.mode);
+  });
+}
+
+function setPracticeMode(mode){
+  PRACTICE.mode=mode; PRACTICE.started=false; PRACTICE.total=0;
+  PRACTICE.correct=0; PRACTICE.streak=0; PRACTICE.current=null;
+  PRACTICE.expected=''; PRACTICE.checked=false;
+  clearPracticeFeedback();
+  highlightPracticeMode();
+  applyAnswerBoxMode();
+}
+
+function setPracticeStats(){
+  const score = document.getElementById('practice-score');
+  const streak = document.getElementById('practice-streak');
+  if(score) score.textContent = PRACTICE.correct+'/'+PRACTICE.total;
+  if(streak) streak.textContent = '\uD83D\uDD25 '+PRACTICE.streak;
+  const fill = document.getElementById('practice-progress-fill');
+  if(fill) fill.style.width = Math.min(100,(PRACTICE.streak/10)*100)+'%';
+}
+
+function showLiveBar(){
+  const bar = document.getElementById('practice-live-bar');
+  if(bar) bar.classList.add('visible');
+}
+
+function clearPracticeFeedback(){
+  const box = document.getElementById('practice-feedback');
+  if(!box) return;
+  box.style.display='none'; box.innerHTML=''; box.className='practice-feedback';
+}
+
+function showPracticeFeedback(state, msg){
+  const box = document.getElementById('practice-feedback');
+  if(!box) return;
+  box.style.display='block';
+  box.className='practice-feedback '+state;
+  box.innerHTML=msg;
+  box.classList.remove('animate-pop','animate-shake');
+  void box.offsetWidth;
+  if(state==='good') box.classList.add('animate-pop');
+  if(state==='bad') box.classList.add('animate-shake');
+}
+
+function normalizeAnswer(s){
+  return String(s||'').trim().toLowerCase()
+    .replace(/[""]/g,'"').replace(/['']/g,"'")
+    .replace(/\s+/g,' ')
+    .replace(/\s+([\.,!\?])/g,'$1')
+    .replace(/([\.,!\?])\s+/g,'$1 ')
+    .replace(/^[\.,!\?\-\s]+|[\.,!\?\-\s]+$/g,'');
+}
+
+function pickRandom(arr){ return (!arr||!arr.length)?null:arr[Math.floor(Math.random()*arr.length)]; }
+function hasArabic(text){ return /[\u0600-\u06FF]/.test(String(text||'')); }
+function getVocabPool(){ return (STATE.vocab||[]).filter(v=>v&&v.dutch&&v.translation); }
+function getSentencePool(){ return (STATE.sentences||[]).filter(s=>s&&s.sentence&&s.translation); }
+function getConjPool(){ return (STATE.conjugations||[]).filter(c=>c&&c.verb&&c.translation); }
+
+function getAllTranslations(dutchWord){
+  return getVocabPool()
+    .filter(v=>v.dutch.trim().toLowerCase()===dutchWord.trim().toLowerCase())
+    .map(v=>v.translation.trim().toLowerCase()).filter(Boolean);
+}
+
+function applyAnswerBoxMode(){
+  const ta = document.getElementById('practice-answer');
+  if(!ta) return;
+  const mode = PRACTICE.mode;
+  if(mode==='conj_english_full'){
+    ta.style.minHeight='140px'; ta.style.maxHeight='260px';
+    ta.setAttribute('placeholder','Alle Formen eingeben, eine pro Zeile:\nich …\ndu …\ner/sie/es …\nwir/ihr/sie …');
+  } else if(mode.includes('_word_')||mode==='listen_word_dutch'||mode==='conj_pronoun_dutch'){
+    ta.style.minHeight='54px'; ta.style.maxHeight='90px';
+    ta.setAttribute('placeholder','Antwort eingeben… (Enter = Prüfen)');
+  } else {
+    ta.style.minHeight='120px'; ta.style.maxHeight='220px';
+    ta.setAttribute('placeholder','Satz eingeben… (Enter = Prüfen, Shift+Enter = neue Zeile)');
+  }
+}
+
+function setPracticePrompt(label, main, sub, iconClass){
+  const lEl = document.getElementById('practice-label');
+  const mEl = document.getElementById('practice-main');
+  const sEl = document.getElementById('practice-sub');
+  const iEl = document.getElementById('practice-icon');
+  if(lEl) lEl.textContent = label||'';
+  if(mEl) mEl.textContent = main||'';
+  if(sEl){ if(sub){sEl.textContent=sub;sEl.style.display='block';}else{sEl.textContent='';sEl.style.display='none';} }
+  if(iEl&&iconClass) iEl.innerHTML='<i class="fas '+iconClass+'"></i>';
+}
+
+function buildPracticeItem(){
+  const mode = PRACTICE.mode;
+  const answerEl = document.getElementById('practice-answer');
+  if(answerEl) answerEl.value='';
+  clearPracticeFeedback();
+  applyAnswerBoxMode();
+  PRACTICE.checked=false;
+
+  if(mode==='listen_word_dutch'){
+    const v=pickRandom(getVocabPool());
+    if(!v){setPracticePrompt('Keine Daten','Zuerst Vokabular hinzufügen.','','fa-circle-info');return;}
+    PRACTICE.current={type:'vocab',data:v};
+    PRACTICE.expected=getDutchWithArticle(v);
+    const art=String(v.article||'').trim().toLowerCase();
+    const req=(art==='der'||art==='die'||art==='das')?'Artikel erforderlich: '+art:'Kein Artikel nötig';
+    setPracticePrompt('Listen \u2192 Dutch','Höre zu und tippe das deutsche Wort',req,'fa-volume-high');
+    setTimeout(()=>practicePlay(),300);
+  }
+  else if(mode==='listen_sentence_dutch'){
+    const s=pickRandom(getSentencePool());
+    if(!s){setPracticePrompt('Keine Daten','Zuerst Sätze hinzufügen.','','fa-circle-info');return;}
+    PRACTICE.current={type:'sentence',data:s};
+    PRACTICE.expected=s.sentence;
+    setPracticePrompt('Listen \u2192 Dutch','Höre zu und tippe den deutschen Satz','Tippe Anhören, um es erneut zu hören.','fa-headphones');
+    setTimeout(()=>practicePlay(),300);
+  }
+  else if(mode==='see_translation_word_dutch'){
+    const v=pickRandom(getVocabPool());
+    if(!v){setPracticePrompt('Keine Daten','Zuerst Vokabular hinzufügen.','','fa-circle-info');return;}
+    PRACTICE.current={type:'vocab',data:v};
+    PRACTICE.expected=getDutchWithArticle(v);
+    const art=String(v.article||'').trim().toLowerCase();
+    const needsArticle=(art==='der'||art==='die'||art==='das');
+    const articleHint=needsArticle?' \u2022 Include article: '+art:'';
+    const sub=v.arabic?'English: '+v.translation+' \u2022 Arabic: '+v.arabic+articleHint:'English: '+v.translation+articleHint;
+    setPracticePrompt('Translate \u2192 Dutch',v.translation,sub,'fa-language');
+  }
+  else if(mode==='see_translation_sentence_dutch'){
+    const s=pickRandom(getSentencePool());
+    if(!s){setPracticePrompt('Keine Daten','Zuerst Sätze hinzufügen.','','fa-circle-info');return;}
+    PRACTICE.current={type:'sentence',data:s};
+    PRACTICE.expected=s.sentence;
+    setPracticePrompt('Translate \u2192 Dutch',s.translation,'Schreibe den deutschen Satz für diese Übersetzung.','fa-file-lines');
+  }
+  else if(mode==='see_dutch_word_english'){
+    const pool=getVocabPool();
+    const v=pickRandom(pool);
+    if(!v){setPracticePrompt('Keine Daten','Zuerst Vokabular hinzufügen.','','fa-circle-info');return;}
+    const dupes=pool.filter(x=>x.dutch.trim().toLowerCase()===v.dutch.trim().toLowerCase());
+    PRACTICE.current={type:'vocab',data:v,allDupes:dupes};
+    PRACTICE.expected=v.translation;
+    const art=String(v.article||'').trim().toLowerCase();
+    const dutch=(art==='de'||art==='het')?art+' '+v.dutch:v.dutch;
+    const hint=dupes.length>1?' ('+(dupes.indexOf(v)+1)+' of '+dupes.length+' meanings)':'';
+    setPracticePrompt('Dutch \u2192 English',dutch+hint,'Schreibe die englische Bedeutung.','fa-book');
+  }
+  else if(mode==='see_dutch_sentence_english'){
+    const s=pickRandom(getSentencePool());
+    if(!s){setPracticePrompt('Keine Daten','Zuerst Sätze hinzufügen.','','fa-circle-info');return;}
+    PRACTICE.current={type:'sentence',data:s};
+    PRACTICE.expected=s.translation;
+    setPracticePrompt('Dutch \u2192 English',s.sentence,'Schreibe die englische Übersetzung.','fa-comments');
+  }
+  else if(mode==='conj_english_full'){
+    const c=pickRandom(getConjPool());
+    if(!c){setPracticePrompt('Keine Daten','Zuerst Konjugationen hinzufügen.','','fa-circle-info');return;}
+    PRACTICE.current={type:'conj_full',data:c};
+    PRACTICE.expected=c;
+    setPracticePrompt('Englisch \u2192 Konjugation (alle Formen)','"'+c.translation+'" ('+c.tense+')','Alle Formen eingeben, eine pro Zeile: ich / du / er,sie,es / wir,ihr,sie','fa-table-list');
+  }
+  else if(mode==='conj_pronoun_dutch'){
+    const c=pickRandom(getConjPool());
+    if(!c){setPracticePrompt('Keine Daten','Zuerst Konjugationen hinzufügen.','','fa-circle-info');return;}
+    const slots=[
+      {label:'ich',key:'ik'},{label:'du',key:'jij'},
+      {label:'er/sie/es',key:'hij'},{label:'wir/ihr/sie',key:'jullie'}
+    ].filter(function(s){return c[s.key]&&c[s.key]!=='\u2013';});
+    if(!slots.length){setPracticePrompt('Keine Daten','Keine Konjugationsformen gefunden.','','fa-circle-info');return;}
+    const slot=pickRandom(slots);
+    PRACTICE.current={type:'conj_single',data:c,slot:slot};
+    PRACTICE.expected=c[slot.key];
+    setPracticePrompt('Conjugation \u2192 Dutch',slot.label+' + "'+c.translation+'"','Zeit: '+c.tense+' \u2022 Infinitiv: '+c.verb,'fa-person-rays');
+  }
+
+  if(answerEl) answerEl.focus();
+}
+
+function practiceStartOrNext(){
+  if(!PRACTICE.started){
+    PRACTICE.started=true; PRACTICE.total=0; PRACTICE.correct=0; PRACTICE.streak=0;
+    setPracticeStats();
+  }
+  buildPracticeItem();
+}
+
+function practicePlay(){
+  if(!PRACTICE.current) return;
+  const mode=PRACTICE.mode; const item=PRACTICE.current;
+  if(mode==='listen_word_dutch'){
+    const v=item.data; speakVocab(String(v.article||'').trim().toLowerCase(),v.dutch);
+  } else if(mode==='listen_sentence_dutch'){
+    speak(item.data.sentence);
+  } else if(mode==='conj_english_full'||mode==='conj_pronoun_dutch'){
+    speak(item.data.verb);
+  } else {
+    if(item.type==='vocab') speak(item.data.dutch);
+    else speak(item.data.sentence);
+  }
+}
+
+function practiceReveal(){
+  if(!PRACTICE.current) return;
+  if(PRACTICE.mode==='conj_english_full'){
+    const c=PRACTICE.current.data;
+    showPracticeFeedback('neutral','Answer:<br><b>ich</b> '+pEsc(c.ik)+' \u2022 <b>du</b> '+pEsc(c.jij)+' \u2022 <b>er/sie/es</b> '+pEsc(c.hij)+' \u2022 <b>wir/ihr/sie</b> '+pEsc(c.jullie));
+  } else {
+    showPracticeFeedback('neutral','Antwort: <b>'+pEsc(PRACTICE.expected||'')+'</b>');
+  }
+}
+
+function practiceCheck(){
+  if(!PRACTICE.current) return;
+  const mode=PRACTICE.mode;
+  const answerRaw=(document.getElementById('practice-answer')||{}).value||'';
+  if(mode==='conj_english_full') checkConjugationFull(answerRaw);
+  else if(mode==='see_dutch_word_english') checkDutchToEnglish(answerRaw);
+  else checkStandard(answerRaw);
+  PRACTICE.checked=true;
+  showLiveBar();
+  setPracticeStats();
+}
+
+function checkStandard(answerRaw){
+  const answer=normalizeAnswer(answerRaw);
+  const expected=normalizeAnswer(PRACTICE.expected);
+  if(!answer){showPracticeFeedback('bad','Bitte zuerst eine Antwort eingeben.');return;}
+  PRACTICE.total+=1;
+  const mode=PRACTICE.mode;
+  const isWordMode=mode==='listen_word_dutch'||mode==='see_translation_word_dutch'||mode==='conj_pronoun_dutch';
+  if(answer===expected){
+    PRACTICE.correct+=1; PRACTICE.streak+=1;
+    checkStreakMilestone();
+    if(PRACTICE.streak!==5&&PRACTICE.streak!==10) showPracticeFeedback('good','<i class="fas fa-check-circle"></i> Richtig! \u2713');
+  } else {
+    PRACTICE.streak=0;
+    if(isWordMode&&PRACTICE.current&&PRACTICE.current.data&&PRACTICE.current.type==='vocab'){
+      const v=PRACTICE.current.data;
+      const art=String(v.article||'').trim().toLowerCase();
+      const hasArticle=(art==='der'||art==='die'||art==='das');
+      const answerParts=answer.split(' ');
+      const answerArticle=(['de','het'].includes(answerParts[0]))?answerParts[0]:'';
+      const answerWord=answerArticle?answerParts.slice(1).join(' '):answer;
+      const correctWord=normalizeAnswer(v.dutch);
+      if(hasArticle&&answerWord===correctWord&&answerArticle&&answerArticle!==art){
+        showPracticeFeedback('bad','<i class="fas fa-xmark-circle"></i> Almost! Wrong article \u2014 it\'s <b>'+art+'</b>, not '+answerArticle+'. Answer: <b>'+pEsc(PRACTICE.expected)+'</b>');
+      } else if(hasArticle&&!answerArticle&&answerWord===correctWord){
+        showPracticeFeedback('bad','<i class="fas fa-xmark-circle"></i> Right word! Don\'t forget the article: <b>'+art+' '+pEsc(v.dutch)+'</b>');
+      } else {
+        showPracticeFeedback('bad','<i class="fas fa-xmark-circle"></i> Nicht ganz. Antwort: <b>'+pEsc(PRACTICE.expected)+'</b>');
+      }
+    } else {
+      showPracticeFeedback('bad','<i class="fas fa-xmark-circle"></i> Nicht ganz. Antwort: <b>'+pEsc(PRACTICE.expected)+'</b>');
+    }
+  }
+}
+
+function checkDutchToEnglish(answerRaw){
+  const answer=normalizeAnswer(answerRaw);
+  if(!answer){showPracticeFeedback('bad','Bitte zuerst eine Antwort eingeben.');return;}
+  PRACTICE.total+=1;
+  const v=PRACTICE.current.data;
+  const allValid=getAllTranslations(v.dutch);
+  const matched=allValid.some(t=>normalizeAnswer(t)===answer);
+  if(matched){
+    PRACTICE.correct+=1; PRACTICE.streak+=1;
+    checkStreakMilestone();
+    if(PRACTICE.streak!==5&&PRACTICE.streak!==10) showPracticeFeedback('good','<i class="fas fa-check-circle"></i> Richtig! \u2713');
+  } else {
+    PRACTICE.streak=0;
+    const allDisplay=allValid.map(t=>'<b>'+pEsc(t)+'</b>').join(' or ');
+    showPracticeFeedback('bad','<i class="fas fa-xmark-circle"></i> Nicht ganz. Gültig: '+allDisplay);
+  }
+}
+
+function checkConjugationFull(answerRaw){
+  if(!answerRaw.trim()){showPracticeFeedback('bad','Bitte Konjugationsformen eingeben.');return;}
+  PRACTICE.total+=1;
+  const c=PRACTICE.current.data;
+  const lines=answerRaw.split('\n').map(l=>l.trim()).filter(Boolean);
+  const expected=[
+    {label:'ich',key:'ik',val:c.ik},
+    {label:'du',key:'jij',val:c.jij},
+    {label:'er/sie/es',key:'hij',val:c.hij},
+    {label:'wir/ihr/sie',key:'jullie',val:c.jullie}
+  ].filter(function(e){return e.val&&e.val!=='\u2013';});
+  let allCorrect=true;
+  const resultLines=[];
+  expected.forEach(function(exp,i){
+    const userVal=normalizeAnswer(lines[i]||'');
+    const expVal=normalizeAnswer(exp.val);
+    if(userVal===expVal){
+      resultLines.push('<span style="color:var(--green)"><i class="fas fa-check"></i> <b>'+exp.label+':</b> '+pEsc(exp.val)+'</span>');
+    } else {
+      allCorrect=false;
+      resultLines.push('<span style="color:var(--red)"><i class="fas fa-xmark"></i> <b>'+exp.label+':</b> you wrote "'+pEsc(lines[i]||'\u2014')+'" \u2192 correct: <b>'+pEsc(exp.val)+'</b></span>');
+    }
+  });
+  if(allCorrect){
+    PRACTICE.correct+=1; PRACTICE.streak+=1;
+    checkStreakMilestone();
+    if(PRACTICE.streak!==5&&PRACTICE.streak!==10) showPracticeFeedback('good','<i class="fas fa-check-circle"></i> Alle Formen korrekt! \u2713<br>'+resultLines.join('<br>'));
+  } else {
+    PRACTICE.streak=0;
+    showPracticeFeedback('bad',resultLines.join('<br>'));
+  }
+}
+
+function checkStreakMilestone(){
+  if(PRACTICE.streak===5){
+    showPracticeFeedback('good','\uD83D\uDD25 5er-Serie! Ausgezeichnet! Weiter so! \u2713');
+  } else if(PRACTICE.streak===10){
+    showPracticeFeedback('good','\uD83C\uDFC6 10er-Serie! Hervorragend! Du bist in Topform! \u2713');
+  }
+}
 
 launchApp();
 </script>
